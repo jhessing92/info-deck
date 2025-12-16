@@ -1,0 +1,13 @@
+[
+  {
+    "id": "ccsd-sentiment-monitor",
+    "title": "CCSD Public Comment Tracking",
+    "description": "Comprehensive monitoring system that tracks board member mentions across social media, online news sources, townhalls, and public forums — with board policy compliance tracking.",
+    "thumbnail": "/demos/ccsd-sentiment-monitor/thumb.png",
+    "steps": [
+      "/demos/ccsd-sentiment-monitor/step1.png",
+      "/demos/ccsd-sentiment-monitor/step2.png",
+      "/demos/ccsd-sentiment-monitor/step3.png"
+    ]
+  }
+]
