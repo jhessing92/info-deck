@@ -58,7 +58,8 @@ const slides = [
   { id: 9, title: "What We Build" },
   { id: 10, title: "Proof: Real Results" },
   { id: 11, title: "The Control Plane" },
-  { id: 12, title: "30-Day Launch + Pricing" }
+  { id: 12, title: "30-Day Launch + Pricing" },
+  { id: 13, title: "Appendix: Tech Stack" }
 ];
 
 // Slide 1 - Cover: Own Your AI. ROI in Weeks.
@@ -2734,6 +2735,243 @@ const Slide12Final: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
+// Slide 13 - Appendix: PurTera IT Tech Stack Example
+const Slide13Appendix: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 right-1/3 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        {/* Header */}
+        <div className="text-center mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white animate-fade-in-up tracking-tight">
+            Appendix: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">Real Client Architecture</span>
+          </h2>
+          <p className="text-slate-400 mt-2 text-sm sm:text-base">
+            PurTera IT "Mullet Stack" — <span className="text-cyan-400">Buy vs Build</span> approach for field services
+          </p>
+        </div>
+
+        {/* Legend */}
+        <div className="flex justify-center gap-6 mb-4">
+          <div className="flex items-center gap-2">
+            <span className="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">BUY</span>
+            <span className="text-slate-400 text-sm">Existing SaaS</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="px-3 py-1 bg-cyan-500 text-slate-900 text-xs font-bold rounded-full">BUILD</span>
+            <span className="text-slate-400 text-sm">Custom AI/IP</span>
+          </div>
+        </div>
+
+        {/* Main Architecture Diagram */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Left Column - Core Stack */}
+          <div className="lg:col-span-2 space-y-3">
+            {/* Front Office Layer */}
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-4 border border-purple-500/30">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-purple-400 font-bold text-base">Front Office (SaaS Layer)</h3>
+                <span className="px-2 py-0.5 bg-purple-600/30 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/50">BUY</span>
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/50 text-center">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <span className="text-white font-semibold text-sm">HubSpot</span>
+                    <span className="px-1.5 py-0.5 bg-purple-600 text-white text-[10px] font-bold rounded">BUY</span>
+                  </div>
+                  <p className="text-slate-500 text-xs">Deals, tickets, invoices</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/50 text-center">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <span className="text-white font-semibold text-sm">Fireflies.ai</span>
+                    <span className="px-1.5 py-0.5 bg-purple-600 text-white text-[10px] font-bold rounded">BUY</span>
+                  </div>
+                  <p className="text-slate-500 text-xs">Calls + transcripts</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/50 text-center">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <span className="text-white font-semibold text-sm">Field Nation</span>
+                    <span className="px-1.5 py-0.5 bg-purple-600 text-white text-[10px] font-bold rounded">BUY</span>
+                  </div>
+                  <p className="text-slate-500 text-xs">1099 dispatch + pay</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center">
+              <div className="w-0.5 h-4 bg-gradient-to-b from-purple-500/50 to-blue-500/50" />
+            </div>
+
+            {/* Orchestration Layer */}
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-4 border border-blue-500/30">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-blue-400 font-bold text-base">Orchestration & Glue Layer</h3>
+                <span className="px-2 py-0.5 bg-purple-600/30 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/50">BUY</span>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/50">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-white font-semibold text-sm">n8n Orchestrator</span>
+                  <span className="px-1.5 py-0.5 bg-purple-600 text-white text-[10px] font-bold rounded">BUY</span>
+                </div>
+                <p className="text-slate-500 text-xs">Workflow engine + webhooks; routes data between systems</p>
+              </div>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center">
+              <div className="w-0.5 h-4 bg-gradient-to-b from-blue-500/50 to-cyan-500/50" />
+            </div>
+
+            {/* AI Brain Layer */}
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-4 border border-cyan-500/30 relative">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-cyan-400 font-bold text-base">AI Brain (Our IP)</h3>
+                <span className="px-2 py-0.5 bg-cyan-500/30 text-cyan-300 text-xs font-semibold rounded-full border border-cyan-500/50">BUILD</span>
+              </div>
+              <p className="text-slate-500 text-xs mb-3">Core: Python / FastAPI "Brain" — Catches bad work before tech leaves site → fewer truck rolls</p>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-slate-800/60 rounded-lg p-2.5 border border-cyan-500/30">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-white font-medium text-sm">SOW Generator</span>
+                    <span className="px-1.5 py-0.5 bg-cyan-500 text-slate-900 text-[10px] font-bold rounded">BUILD</span>
+                  </div>
+                  <p className="text-slate-500 text-[10px]">RAG + LLM (SOW in ~30s)</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-lg p-2.5 border border-cyan-500/30">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-white font-medium text-sm">Risk Engine</span>
+                    <span className="px-1.5 py-0.5 bg-cyan-500 text-slate-900 text-[10px] font-bold rounded">BUILD</span>
+                  </div>
+                  <p className="text-slate-500 text-[10px]">COT schedule / margin risk</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-lg p-2.5 border border-cyan-500/30">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-white font-medium text-sm">Vision QC Engine</span>
+                    <span className="px-1.5 py-0.5 bg-cyan-500 text-slate-900 text-[10px] font-bold rounded">BUILD</span>
+                  </div>
+                  <p className="text-slate-500 text-[10px]">Photo QC (labels, cable mgmt)</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-lg p-2.5 border border-cyan-500/30">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-white font-medium text-sm">FastAPI Brain</span>
+                    <span className="px-1.5 py-0.5 bg-cyan-500 text-slate-900 text-[10px] font-bold rounded">BUILD</span>
+                  </div>
+                  <p className="text-slate-500 text-[10px]">API + rules + auth</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center">
+              <div className="w-0.5 h-4 bg-gradient-to-b from-cyan-500/50 to-emerald-500/50" />
+            </div>
+
+            {/* Data Layer */}
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-4 border border-emerald-500/30">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-emerald-400 font-bold text-base">Data & Persistence Layer</h3>
+                <span className="px-2 py-0.5 bg-purple-600/30 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/50">BUY</span>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/50 mb-3">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-white font-semibold text-sm">Supabase DB</span>
+                  <span className="px-1.5 py-0.5 bg-purple-600 text-white text-[10px] font-bold rounded">BUY</span>
+                </div>
+                <p className="text-slate-500 text-xs">Postgres shadow DB + evidence trail</p>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {['WAPs', 'Patch panels', 'Photos', 'QC results', 'Projects', 'Sites', 'Rooms', 'Racks', 'Ports', 'Cable runs'].map((entity) => (
+                  <span key={entity} className="px-2 py-1 bg-slate-800/80 text-slate-400 text-[10px] rounded border border-slate-700/50">{entity}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Field Execution */}
+          <div className="space-y-3">
+            {/* Field Execution */}
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-4 border border-cyan-500/30 h-fit">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-cyan-400 font-bold text-base">Field Execution (Offline-First)</h3>
+                <span className="px-2 py-0.5 bg-cyan-500/30 text-cyan-300 text-xs font-semibold rounded-full border border-cyan-500/50">BUILD</span>
+              </div>
+              
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-cyan-500/20 mb-3">
+                <h4 className="text-white font-semibold text-sm mb-2">Custom Offline App (React Native)</h4>
+                <p className="text-slate-500 text-xs mb-2">"Fisher-Price simple" for subs</p>
+                <ul className="space-y-1 text-xs text-slate-400">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+                    Runbook synced from SOW
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+                    Step-by-step checklist
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+                    Photo capture
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+                    Barcode / label scans
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-emerald-400 rounded-full" />
+                    100% offline (basement-safe)
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/50">
+                <h4 className="text-white font-semibold text-sm mb-2">Field Technicians (1099 subs)</h4>
+                <ul className="space-y-1 text-xs text-slate-400">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-blue-400 rounded-full" />
+                    Tech uses app on site
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-blue-400 rounded-full" />
+                    Photos sync → Vision QC checks
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-red-400 rounded-full" />
+                    FAIL → app flashes red, request fix
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1 h-1 bg-emerald-400 rounded-full" />
+                    PASS → triggers payment + invoicing
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Offline Badge */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm rounded-xl p-4 border border-emerald-500/40 text-center">
+              <p className="text-emerald-300 font-semibold text-sm">Works 100% offline — basement-safe, zero connectivity required</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-4 text-center">
+          <p className="text-slate-500 text-xs">
+            Suggested core: HubSpot + Fireflies + Field Nation | n8n orchestrates | FastAPI brain + Vision QC | Supabase shadow DB | Offline React Native app.
+          </p>
+          <p className="text-slate-600 text-xs mt-2 italic">
+            Architecture shared by PurTera IT — demonstrating the Shoofly "Buy vs Build" approach
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Main component
 export const MarketingAIOS: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -2785,6 +3023,7 @@ export const MarketingAIOS: React.FC = () => {
       case 9: return <Slide10Proof isActive={isActive} slideIndex={currentSlide} />;     // Proof: Real Results
       case 10: return <Slide11ControlPlane isActive={isActive} slideIndex={currentSlide} />; // Control Plane Dashboard
       case 11: return <Slide12Final isActive={isActive} slideIndex={currentSlide} />;    // 30-Day Launch + Pricing
+      case 12: return <Slide13Appendix isActive={isActive} slideIndex={currentSlide} />;  // Appendix: Tech Stack
       default: return <Slide1 isActive={isActive} slideIndex={currentSlide} />;
     }
   };
