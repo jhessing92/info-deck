@@ -59,8 +59,8 @@ const slides = [
   { id: 10, title: "Proof: Real Results" },
   { id: 11, title: "The Control Plane" },
   { id: 12, title: "30-Day Launch + Pricing" },
-  { id: 13, title: "Appendix: Tech Stack" },
-  { id: 14, title: "Appendix: Native vs Custom AI" }
+  { id: 13, title: "Appendix: Native vs Custom AI" },
+  { id: 14, title: "Appendix: PurTera Feedback" }
 ];
 
 // Slide 1 - Cover: Own Your AI. ROI in Weeks.
@@ -2749,10 +2749,10 @@ const Slide13Appendix: React.FC<SlideProps> = ({ isActive }) => {
         {/* Header */}
         <div className="text-center mb-4">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white animate-fade-in-up tracking-tight">
-            Appendix: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">Real Client Architecture</span>
+            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">PurTera IT</span> — Proposed Architecture
           </h2>
           <p className="text-slate-400 mt-2 text-sm sm:text-base">
-            PurTera IT "Mullet Stack" — <span className="text-cyan-400">Buy vs Build</span> approach for field services
+            "Mullet Stack" — <span className="text-cyan-400">Buy vs Build</span> approach for field services | <span className="text-emerald-400">Feedback welcome</span>
           </p>
         </div>
 
@@ -2959,13 +2959,39 @@ const Slide13Appendix: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
 
+        {/* Feedback Section */}
+        <div className="mt-4 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 backdrop-blur-xl rounded-xl p-4 border border-emerald-500/30">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <MessageSquare className="w-5 h-5 text-emerald-400" />
+            <h4 className="text-white font-bold text-base">Feedback & Notes</h4>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="bg-slate-800/40 rounded-lg p-3 border border-slate-700/50">
+              <p className="text-emerald-400 font-semibold text-xs mb-1">✓ What's Working</p>
+              <ul className="text-slate-400 text-xs space-y-1">
+                <li>• Buy vs Build clarity</li>
+                <li>• Offline-first field execution</li>
+                <li>• Vision QC for quality control</li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/40 rounded-lg p-3 border border-slate-700/50">
+              <p className="text-cyan-400 font-semibold text-xs mb-1">→ Next Steps</p>
+              <ul className="text-slate-400 text-xs space-y-1">
+                <li>• Validate SOW generation accuracy</li>
+                <li>• Test offline sync reliability</li>
+                <li>• Define QC pass/fail thresholds</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Footer */}
-        <div className="mt-4 text-center">
+        <div className="mt-3 text-center">
           <p className="text-slate-500 text-xs">
             Suggested core: HubSpot + Fireflies + Field Nation | n8n orchestrates | FastAPI brain + Vision QC | Supabase shadow DB | Offline React Native app.
           </p>
-          <p className="text-slate-600 text-xs mt-2 italic">
-            Architecture shared by PurTera IT — demonstrating the Shoofly "Buy vs Build" approach
+          <p className="text-slate-600 text-xs mt-1 italic">
+            Architecture proposed for PurTera IT — demonstrating the Shoofly "Buy vs Build" approach
           </p>
         </div>
       </div>
@@ -2973,7 +2999,7 @@ const Slide13Appendix: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
-// Slide 14 - Appendix: Fred's Native AI vs Custom AI Architecture
+// Slide 13 - Appendix: Fred's Native AI vs Custom AI Architecture
 const Slide14NativeAI: React.FC<SlideProps> = ({ isActive }) => {
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
@@ -3176,8 +3202,8 @@ export const MarketingAIOS: React.FC = () => {
       case 9: return <Slide10Proof isActive={isActive} slideIndex={currentSlide} />;     // Proof: Real Results
       case 10: return <Slide11ControlPlane isActive={isActive} slideIndex={currentSlide} />; // Control Plane Dashboard
       case 11: return <Slide12Final isActive={isActive} slideIndex={currentSlide} />;    // 30-Day Launch + Pricing
-      case 12: return <Slide13Appendix isActive={isActive} slideIndex={currentSlide} />;  // Appendix: Tech Stack
-      case 13: return <Slide14NativeAI isActive={isActive} slideIndex={currentSlide} />;  // Appendix: Native vs Custom AI
+      case 12: return <Slide14NativeAI isActive={isActive} slideIndex={currentSlide} />;  // Appendix: Native vs Custom AI
+      case 13: return <Slide13Appendix isActive={isActive} slideIndex={currentSlide} />;  // Appendix: PurTera Feedback
       default: return <Slide1 isActive={isActive} slideIndex={currentSlide} />;
     }
   };
