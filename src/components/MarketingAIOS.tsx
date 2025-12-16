@@ -59,7 +59,8 @@ const slides = [
   { id: 10, title: "Proof: Real Results" },
   { id: 11, title: "The Control Plane" },
   { id: 12, title: "30-Day Launch + Pricing" },
-  { id: 13, title: "Appendix: Tech Stack" }
+  { id: 13, title: "Appendix: Tech Stack" },
+  { id: 14, title: "Appendix: Native vs Custom AI" }
 ];
 
 // Slide 1 - Cover: Own Your AI. ROI in Weeks.
@@ -2972,6 +2973,158 @@ const Slide13Appendix: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
+// Slide 14 - Appendix: Fred's Native AI vs Custom AI Architecture
+const Slide14NativeAI: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        {/* Header */}
+        <div className="text-center mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white animate-fade-in-up tracking-tight">
+            Appendix: <span className="bg-gradient-to-r from-orange-400 to-blue-400 text-transparent bg-clip-text">Native AI vs Custom Agents</span>
+          </h2>
+          <p className="text-slate-400 mt-2 text-sm sm:text-base">
+            How we layer custom intelligence on top of native AI features
+          </p>
+        </div>
+
+        {/* Main Architecture Diagram */}
+        <div className="relative">
+          {/* Top Row - Native AI Apps */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            {/* Fireflies */}
+            <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 backdrop-blur-xl rounded-xl p-5 border border-purple-500/30 text-center">
+              <div className="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <MessageSquare className="w-7 h-7 text-purple-400" />
+              </div>
+              <h3 className="text-white font-bold text-lg mb-1">Fireflies AI Notetaker</h3>
+              <p className="text-purple-300 text-sm font-medium mb-2">Native AI App</p>
+              <p className="text-slate-500 text-xs">Auto-transcribes calls, extracts action items</p>
+            </div>
+
+            {/* HubSpot Breeze */}
+            <div className="bg-gradient-to-br from-orange-500/10 to-orange-600/5 backdrop-blur-xl rounded-xl p-5 border border-orange-500/30 text-center">
+              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <Sparkles className="w-7 h-7 text-orange-400" />
+              </div>
+              <h3 className="text-white font-bold text-lg mb-1">'Breeze' HubSpot AI</h3>
+              <p className="text-orange-300 text-sm font-medium mb-2">Native AI App</p>
+              <p className="text-slate-500 text-xs">CRM summaries, email drafts, lead scoring</p>
+            </div>
+
+            {/* ChatGPT */}
+            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 backdrop-blur-xl rounded-xl p-5 border border-emerald-500/30 text-center">
+              <div className="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <Brain className="w-7 h-7 text-emerald-400" />
+              </div>
+              <h3 className="text-white font-bold text-lg mb-1">ChatGPT Chat</h3>
+              <p className="text-emerald-300 text-sm font-medium mb-2">Native AI App</p>
+              <p className="text-slate-500 text-xs">Ad-hoc queries, content generation</p>
+            </div>
+          </div>
+
+          {/* Connector Lines */}
+          <div className="flex justify-center items-center gap-8 my-4">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-600 to-slate-600" />
+            <div className="flex items-center gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-3 h-8 bg-gradient-to-b from-purple-500/50 to-blue-500/50 rounded-full" />
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-3 h-8 bg-gradient-to-b from-orange-500/50 to-blue-500/50 rounded-full" />
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-3 h-8 bg-gradient-to-b from-emerald-500/50 to-blue-500/50 rounded-full" />
+              </div>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-slate-600 via-slate-600 to-transparent" />
+          </div>
+
+          {/* API Layer */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div className="bg-slate-800/60 backdrop-blur-xl rounded-xl p-4 border border-slate-600/50 text-center">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <Network className="w-5 h-5 text-purple-400" />
+                <h4 className="text-white font-semibold">Fireflies APIs</h4>
+              </div>
+              <p className="text-slate-500 text-xs">Transcripts, summaries, action items, meeting data</p>
+            </div>
+            <div className="bg-slate-800/60 backdrop-blur-xl rounded-xl p-4 border border-slate-600/50 text-center">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <Network className="w-5 h-5 text-orange-400" />
+                <h4 className="text-white font-semibold">HubSpot APIs</h4>
+              </div>
+              <p className="text-slate-500 text-xs">Contacts, deals, tickets, emails, custom objects</p>
+            </div>
+          </div>
+
+          {/* Arrow Down */}
+          <div className="flex justify-center mb-6">
+            <div className="flex flex-col items-center">
+              <div className="w-0.5 h-6 bg-gradient-to-b from-slate-600 to-cyan-500" />
+              <ArrowRight className="w-5 h-5 text-cyan-400 rotate-90" />
+            </div>
+          </div>
+
+          {/* Custom AI Agents */}
+          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-2xl p-6 border-2 border-cyan-500/40">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-cyan-400" />
+              </div>
+              <h3 className="text-cyan-400 font-bold text-xl">Custom AI Agents</h3>
+              <span className="px-3 py-1 bg-cyan-500/30 text-cyan-300 text-xs font-bold rounded-full border border-cyan-500/50">YOUR IP</span>
+            </div>
+            
+            <p className="text-slate-400 text-sm text-center mb-4">
+              Your custom agents consume data from native AI tools via APIs, then apply <span className="text-cyan-400 font-semibold">your business logic</span>
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-cyan-500/20 text-center">
+                <p className="text-white text-sm font-medium">Deal Scorer</p>
+                <p className="text-slate-500 text-[10px]">Prioritize by fit</p>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-cyan-500/20 text-center">
+                <p className="text-white text-sm font-medium">Follow-up Agent</p>
+                <p className="text-slate-500 text-[10px]">Auto-draft sequences</p>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-cyan-500/20 text-center">
+                <p className="text-white text-sm font-medium">Meeting Intel</p>
+                <p className="text-slate-500 text-[10px]">Extract commitments</p>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-cyan-500/20 text-center">
+                <p className="text-white text-sm font-medium">Risk Alerter</p>
+                <p className="text-slate-500 text-[10px]">Flag churn signals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Insight */}
+        <div className="mt-6 bg-gradient-to-r from-orange-500/10 via-slate-900/50 to-cyan-500/10 backdrop-blur-sm rounded-xl p-4 border border-slate-600/50 text-center">
+          <p className="text-slate-300 text-sm">
+            <span className="text-orange-400 font-semibold">Native AI</span> handles the basics → 
+            <span className="text-cyan-400 font-semibold"> Custom Agents</span> add your competitive edge
+          </p>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-4 text-center">
+          <p className="text-slate-600 text-xs italic">
+            Diagram illustrating layered AI approach — native tools + custom agents via APIs
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Main component
 export const MarketingAIOS: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -3024,6 +3177,7 @@ export const MarketingAIOS: React.FC = () => {
       case 10: return <Slide11ControlPlane isActive={isActive} slideIndex={currentSlide} />; // Control Plane Dashboard
       case 11: return <Slide12Final isActive={isActive} slideIndex={currentSlide} />;    // 30-Day Launch + Pricing
       case 12: return <Slide13Appendix isActive={isActive} slideIndex={currentSlide} />;  // Appendix: Tech Stack
+      case 13: return <Slide14NativeAI isActive={isActive} slideIndex={currentSlide} />;  // Appendix: Native vs Custom AI
       default: return <Slide1 isActive={isActive} slideIndex={currentSlide} />;
     }
   };
