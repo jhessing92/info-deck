@@ -42,23 +42,25 @@ interface SlideProps {
 }
 
 const slides = [
-  { id: 1, title: "Own your AI. ROI in weeks." },
-  { id: 2, title: "Why Now" },
-  { id: 3, title: "What 'Own Your AI' Means" },
-  { id: 4, title: "What We Build" },
-  { id: 5, title: "Outcomes We Deliver" },
-  { id: 6, title: "How the Stack Fits Together" },
-  { id: 7, title: "Proof & Vertical Wedges" },
-  { id: 8, title: "30-Day Timeline" },
-  { id: 9, title: "Guarantee + Ownership" },
-  { id: 10, title: "Decide Now" }
+  { id: 1, title: "Own Your AI. ROI in Weeks." },
+  { id: 2, title: "The Problem" },
+  { id: 3, title: "Renting Intelligence Costs You" },
+  { id: 4, title: "The Solution" },
+  { id: 5, title: "You Own It. We Operate It." },
+  { id: 6, title: "Why Now" },
+  { id: 7, title: "The Shoofly Method" },
+  { id: 8, title: "What We Build" },
+  { id: 9, title: "Demo: Workflow" },
+  { id: 10, title: "Proof: Real Results" },
+  { id: 11, title: "The Control Plane" },
+  { id: 12, title: "30-Day Launch + Pricing" }
 ];
 
-// Slide 1 - Title: Own your AI. ROI in weeks.
+// Slide 1 - Cover: Own Your AI. ROI in Weeks.
 const Slide1: React.FC<SlideProps> = ({ isActive }) => {
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950/30 to-emerald-950/20 px-4 sm:px-6 lg:px-8 py-4 pb-32">
-      {/* Enhanced gradient background with more visual interest */}
+      {/* Enhanced gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
       
@@ -66,34 +68,53 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
 
-      {/* Main content - Much tighter spacing */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center space-y-5 sm:space-y-7 lg:space-y-9 z-10 max-w-7xl animate-fade-in-up pt-16 sm:pt-20 lg:pt-24">
-        {/* Main headline - Big but balanced */}
+      {/* Main content */}
+      <div className="flex-1 flex flex-col items-center justify-center text-center space-y-6 sm:space-y-8 lg:space-y-10 z-10 max-w-7xl animate-fade-in-up pt-16 sm:pt-20 lg:pt-24">
+        {/* Main headline */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-[0.9] px-4">
           <span className="block text-white mb-2">
-            Own your AI.
+            Own Your AI.
           </span>
           <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 text-transparent bg-clip-text animate-gradient-shift">
-            ROI in weeks.
+            ROI in Weeks.
           </span>
         </h1>
         
-        {/* Tagline - More readable size */}
-        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-200 font-medium tracking-wide px-4 max-w-5xl mt-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          Start small, prove value, scale forever. <span className="text-emerald-400 font-bold">You own it.</span>
+        {/* Subtitle */}
+        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-200 font-medium tracking-wide px-4 max-w-5xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          Your AI brain. <span className="text-emerald-400 font-bold">Your keys.</span> We handle the ops.
         </p>
         
-        {/* Badge - Prominent but not overwhelming */}
-        <div className="inline-flex items-center space-x-3 px-7 sm:px-9 lg:px-10 py-3 sm:py-4 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-sm border-2 border-emerald-500/50 rounded-2xl animate-fade-in-up shadow-lg shadow-emerald-500/20 mt-4" style={{ animationDelay: '0.4s' }}>
+        {/* Footer tagline badge */}
+        <div className="inline-flex items-center space-x-3 px-7 sm:px-9 lg:px-10 py-3 sm:py-4 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-sm border-2 border-emerald-500/50 rounded-2xl animate-fade-in-up shadow-lg shadow-emerald-500/20" style={{ animationDelay: '0.4s' }}>
           <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse flex-shrink-0" />
           <p className="text-base sm:text-lg lg:text-xl text-emerald-300 font-bold tracking-wide">
-            Applied AI Infrastructure for Growing Organizations
+            Start small → Prove value → Scale forever
           </p>
+        </div>
+
+        {/* Brain + connected apps visual hint */}
+        <div className="flex items-center justify-center gap-4 animate-fade-in-up mt-8" style={{ animationDelay: '0.6s' }}>
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-600/50 flex items-center justify-center">
+              <Database className="w-6 h-6 text-slate-400" />
+            </div>
+            <div className="w-1 h-1 bg-emerald-400 rounded-full" />
+            <div className="w-1 h-1 bg-emerald-400 rounded-full" />
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/30 to-blue-500/30 border-2 border-emerald-400/50 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+              <Brain className="w-8 h-8 text-emerald-400" />
+            </div>
+            <div className="w-1 h-1 bg-blue-400 rounded-full" />
+            <div className="w-1 h-1 bg-blue-400 rounded-full" />
+            <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-600/50 flex items-center justify-center">
+              <Workflow className="w-6 h-6 text-slate-400" />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Footer - All same color and closer to content */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-slate-400 text-sm sm:text-base px-4 mt-8 pb-48 animate-fade-in z-10" style={{ animationDelay: '0.6s' }}>
+      {/* Footer */}
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-slate-400 text-sm sm:text-base px-4 mt-8 pb-48 animate-fade-in z-10" style={{ animationDelay: '0.8s' }}>
         <span className="font-semibold">ShooflyAI</span>
         <span className="hidden sm:inline">•</span>
         <span>2025</span>
@@ -102,58 +123,94 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
-// Slide 2 - Why Now
+// Slide 2 - The Problem: "AI is everywhere… and nowhere"
 const Slide2: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden py-8 pb-32">
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 bg-gradient-to-br from-slate-950 via-red-950/10 to-slate-950 relative overflow-hidden py-8 pb-32">
       {/* Background accent */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(16, 185, 129, 0.3) 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(239, 68, 68, 0.3) 1px, transparent 0)',
           backgroundSize: '50px 50px'
         }} />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto">
-        <h2 className="text-5xl sm:text-6xl font-bold mb-16 text-white animate-fade-in-up tracking-tight text-center">
-          Why Now
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          Every tool is adding AI.
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-red-400 to-orange-400 text-transparent bg-clip-text">None of it works together.</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Bullet 1 */}
+        {/* Three bullet points */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
-            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-emerald-500/30 h-full flex flex-col items-center text-center">
-              <DollarSign className="w-16 h-16 text-emerald-400 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">AI is affordable now</h3>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                Old tech at new prices means you can finally <span className="text-emerald-400 font-semibold">own the stack</span> instead of renting agents
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-red-500/20 h-full">
+              <div className="flex items-center gap-3 mb-3">
+                <Brain className="w-8 h-8 text-red-400" />
+                <h3 className="text-lg font-bold text-white">Siloed "Brains"</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Each app has a "brain" (AI assistant) + "body" (your data). Those brains <span className="text-red-400 font-semibold">can't see across tools</span>.
               </p>
           </div>
         </div>
 
-          {/* Bullet 2 */}
           <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
-            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30 h-full flex flex-col items-center text-center">
-              <Shield className="w-16 h-16 text-blue-400 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Owning beats renting</h3>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                Platform agents lock you in. <span className="text-blue-400 font-semibold">Own your infrastructure</span> and keep control forever
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-orange-500/20 h-full">
+              <div className="flex items-center gap-3 mb-3">
+                <Wrench className="w-8 h-8 text-orange-400" />
+                <h3 className="text-lg font-bold text-white">Manual Glue Work</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                You become the integration layer—copying, pasting, reconciling data between systems <span className="text-orange-400 font-semibold">every day</span>.
               </p>
             </div>
           </div>
 
-          {/* Bullet 3 */}
           <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
-            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/30 h-full flex flex-col items-center text-center">
-              <Database className="w-16 h-16 text-cyan-400 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Portable data & skills</h3>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                Keep your data, playbooks, and <span className="text-cyan-400 font-semibold">model choice</span>. Never lose what you build
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-yellow-500/20 h-full">
+              <div className="flex items-center gap-3 mb-3">
+                <Shield className="w-8 h-8 text-yellow-400" />
+                <h3 className="text-lg font-bold text-white">Growing Lock-in</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Fragmented intelligence + <span className="text-yellow-400 font-semibold">vendor dependency</span>. Your AI capability is trapped in someone else's product.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Brain/Body Diagram with tools */}
+        <div className="relative bg-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8">
+            {/* Tool boxes with their own isolated brains */}
+            {[
+              { name: 'Fireflies', icon: '🎙️', color: 'purple' },
+              { name: 'HubSpot', icon: '🧡', color: 'orange' },
+              { name: 'QuickBooks', icon: '📊', color: 'green' },
+              { name: 'Monday', icon: '📅', color: 'red' },
+              { name: 'Slack', icon: '💬', color: 'blue' },
+            ].map((tool, idx) => (
+              <div key={idx} className="flex flex-col items-center gap-2">
+                <div className={`w-16 h-16 rounded-xl bg-slate-800/80 border border-slate-600/50 flex flex-col items-center justify-center`}>
+                  <span className="text-2xl">{tool.icon}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Brain className="w-3 h-3 text-slate-500" />
+                  <span className="text-xs text-slate-500">isolated</span>
+                </div>
+                <span className="text-xs text-slate-400">{tool.name}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Callout box */}
+          <div className="mt-8 p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
+            <p className="text-center text-slate-300 text-sm sm:text-base">
+              <span className="text-red-400 font-semibold">"Ask Fireflies: which deals are closing?"</span> → It can't answer, because it can't see CRM + QuickBooks.
+            </p>
           </div>
         </div>
       </div>
@@ -161,178 +218,106 @@ const Slide2: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
-// Slide 3 - What 'Own Your AI' Means
+// Slide 3 - What "Renting Intelligence" Costs You
 const Slide3: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden py-8 pb-32">
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-orange-950/10 to-slate-950 relative overflow-hidden py-8 pb-32">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-red-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto">
-        <h2 className="text-5xl sm:text-6xl font-bold mb-16 text-white animate-fade-in-up tracking-tight text-center">
-          What 'Own Your AI' Means
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          You can export data…
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-orange-400 to-red-400 text-transparent bg-clip-text">but you can't export intelligence</span>
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Copy */}
-          <div className="animate-slide-in-left space-y-6">
-            <p className="text-2xl sm:text-3xl font-bold text-white leading-relaxed">
-              Shoofly Intelligence Cloud (SIC) is your <span className="bg-gradient-to-r from-emerald-400 to-blue-400 text-transparent bg-clip-text">owned, managed AI brain</span>.
-            </p>
-            <p className="text-xl text-slate-300 leading-relaxed">
-              Connects the tools you already use so agents, assistants and automations work across the firm. You keep the keys and the data. We can run it or hand it over anytime with no lock-in.
-            </p>
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 pt-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <div className="px-2.5 py-1 bg-emerald-500/10 rounded-full border border-emerald-400/30 flex items-center">
-                <span className="text-emerald-300 font-medium text-[10px] leading-tight">Your data stays yours</span>
+        {/* Three bullet points */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-orange-500/20 h-full">
+              <div className="flex items-center gap-3 mb-3">
+                <Download className="w-8 h-8 text-orange-400" />
+                <h3 className="text-lg font-bold text-white">Export Records ✓</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Vendors let you export records (CSV)… but <span className="text-orange-400 font-semibold">not AI memory or playbooks</span>.
+              </p>
             </div>
-              <div className="px-2.5 py-1 bg-blue-500/10 rounded-full border border-blue-400/30 flex items-center">
-                <span className="text-blue-300 font-medium text-[10px] leading-tight">Access is controlled</span>
+          </div>
+
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-red-500/20 h-full">
+              <div className="flex items-center gap-3 mb-3">
+                <Brain className="w-8 h-8 text-red-400" />
+                <h3 className="text-lg font-bold text-white">Context Lost</h3>
               </div>
-              <div className="px-2.5 py-1 bg-cyan-500/10 rounded-full border border-cyan-400/30 flex items-center">
-                <span className="text-cyan-300 font-medium text-[10px] leading-tight">Full traceability</span>
+              <p className="text-slate-300 leading-relaxed">
+                Switching models = <span className="text-red-400 font-semibold">rebuilding context from scratch</span>. All that learning? Gone.
+              </p>
+            </div>
               </div>
-              <div className="px-2.5 py-1 bg-purple-500/10 rounded-full border border-purple-400/30 flex items-center">
-                <span className="text-purple-300 font-medium text-[10px] leading-tight">SOC 2 Aligned</span>
+
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-yellow-500/20 h-full">
+              <div className="flex items-center gap-3 mb-3">
+                <Shield className="w-8 h-8 text-yellow-400" />
+                <h3 className="text-lg font-bold text-white">Trapped Capability</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Your "AI capability" becomes <span className="text-yellow-400 font-semibold">trapped inside someone else's product</span>.
+              </p>
               </div>
           </div>
         </div>
 
-          {/* Right: Visual - Brain + Lock with tool ring */}
-          <div className="relative flex items-center justify-center animate-slide-in-right">
-            <div className="relative w-80 h-80">
-              {/* Connecting lines - behind everything */}
-              <svg 
-                className="absolute inset-0 w-full h-full pointer-events-none" 
-                style={{ zIndex: 0, overflow: 'visible' }}
-                viewBox="0 0 320 320"
-              >
-                <defs>
-                  {[
-                    { angle: 0, idx: 0 },
-                    { angle: 90, idx: 1 },
-                    { angle: 180, idx: 2 },
-                    { angle: 270, idx: 3 }
-                  ].map((tool) => {
-                    const angle = (tool.angle * Math.PI) / 180;
-                    const radius = 140;
-                    const centerX = 160;
-                    const centerY = 160;
-                    const brainRadius = 64;
-                    const moduleRadius = 32;
-                    
-                    const startX = centerX + Math.cos(angle) * brainRadius;
-                    const startY = centerY + Math.sin(angle) * brainRadius;
-                    const endX = centerX + Math.cos(angle) * (radius - moduleRadius);
-                    const endY = centerY + Math.sin(angle) * (radius - moduleRadius);
-                    
-                    return (
-                      <linearGradient key={`grad-${tool.idx}`} id={`gradient-line-${tool.idx}`} x1={startX} y1={startY} x2={endX} y2={endY} gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stopColor="#10b981" stopOpacity="1" />
-                        <stop offset="50%" stopColor="#3b82f6" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#10b981" stopOpacity="1" />
-                      </linearGradient>
-                    );
-                  })}
-                </defs>
-                {[
-                  { angle: 0 },
-                  { angle: 90 },
-                  { angle: 180 },
-                  { angle: 270 }
-                ].map((tool, idx) => {
-                  const angle = (tool.angle * Math.PI) / 180;
-                  const radius = 140;
-                  const centerX = 160;
-                  const centerY = 160;
-                  const brainRadius = 64;
-                  const moduleRadius = 32;
-                  
-                  const startX = centerX + Math.cos(angle) * brainRadius;
-                  const startY = centerY + Math.sin(angle) * brainRadius;
-                  const endX = centerX + Math.cos(angle) * (radius - moduleRadius);
-                  const endY = centerY + Math.sin(angle) * (radius - moduleRadius);
-                  
-                  return (
-                    <g key={idx}>
-                      {/* Glow effect */}
-                      <line
-                        x1={startX}
-                        y1={startY}
-                        x2={endX}
-                        y2={endY}
-                        stroke={`url(#gradient-line-${idx})`}
-                        strokeWidth="6"
-                        strokeLinecap="round"
-                        opacity="0.5"
-                        className="animate-pulse"
-                        style={{
-                          animationDelay: `${idx * 0.15}s`,
-                          filter: 'blur(4px)'
-                        }}
-                      />
-                      {/* Main pulsing line */}
-                      <line
-                        x1={startX}
-                        y1={startY}
-                        x2={endX}
-                        y2={endY}
-                        stroke={`url(#gradient-line-${idx})`}
-                        strokeWidth="4"
-                        strokeLinecap="round"
-                        className="animate-pulse"
-                        style={{
-                          animationDelay: `${idx * 0.15}s`,
-                          opacity: 1,
-                          filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 1)) drop-shadow(0 0 4px rgba(59, 130, 246, 1))'
-                        }}
-                      />
-                    </g>
-                  );
-                })}
-              </svg>
-
-              {/* Central brain with lock */}
-              <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 10 }}>
-                <div className="relative">
-                  <div className="w-32 h-32 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl flex items-center justify-center border-2 border-emerald-500/30 shadow-xl">
-                    <Brain className="w-16 h-16 text-emerald-400" />
+        {/* Split-screen visual */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="bg-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">
+            <div className="flex items-center gap-3 mb-4">
+              <CheckCircle2 className="w-8 h-8 text-green-400" />
+              <h3 className="text-xl font-bold text-white">Export Data</h3>
                   </div>
-                  <Shield className="absolute -bottom-2 -right-2 w-10 h-10 text-blue-400 bg-slate-900 rounded-full p-2 border-2 border-blue-500/30" />
-                </div>
+            <ul className="space-y-2 text-slate-300">
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span> CSV downloads
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span> API data access
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span> Record backups
+              </li>
+            </ul>
               </div>
 
-              {/* Tool logos ring */}
-              {[
-                { icon: Database, label: 'DB', angle: 0 },
-                { icon: Network, label: 'API', angle: 90 },
-                { icon: Workflow, label: 'Flow', angle: 180 },
-                { icon: Activity, label: 'Sync', angle: 270 }
-              ].map((tool, idx) => {
-                const angle = (tool.angle * Math.PI) / 180;
-                const radius = 140;
-                return (
-            <div
-              key={idx}
-                    className="absolute animate-fade-in"
-                    style={{
-                      left: `calc(50% + ${Math.cos(angle) * radius}px)`,
-                      top: `calc(50% + ${Math.sin(angle) * radius}px)`,
-                      transform: 'translate(-50%, -50%)',
-                      animationDelay: `${idx * 0.2}s`,
-                      zIndex: 10
-                    }}
-                  >
-                    <div className="w-16 h-16 bg-slate-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center border border-slate-700/50">
-                      <tool.icon className="w-8 h-8 text-slate-400" />
+          <div className="bg-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-red-500/30">
+            <div className="flex items-center gap-3 mb-4">
+              <X className="w-8 h-8 text-red-400" />
+              <h3 className="text-xl font-bold text-white">Export Intelligence</h3>
               </div>
+            <ul className="space-y-2 text-slate-300">
+              <li className="flex items-center gap-2">
+                <span className="text-red-400">✗</span> AI memory & context
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-red-400">✗</span> Trained playbooks
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-red-400">✗</span> Custom workflows
+              </li>
+            </ul>
             </div>
-                );
-              })}
             </div>
+
+        {/* Memory is the moat callout */}
+        <div className="mt-8 text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/40 rounded-full">
+            <Sparkles className="w-5 h-5 text-orange-400" />
+            <span className="text-lg font-semibold text-orange-300">Memory is the moat</span>
           </div>
         </div>
       </div>
@@ -340,141 +325,111 @@ const Slide3: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
-// Slide 4 - What We Build
+// Slide 4 - The Solution in One Sentence
 const Slide4: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden py-8 pb-48">
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-emerald-950/20 to-slate-950 relative overflow-hidden py-8 pb-32">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-white animate-fade-in-up tracking-tight text-center">
-          What We Build
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in-up tracking-tight text-center">
+          Own the brain that
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-emerald-400 to-blue-400 text-transparent bg-clip-text">connects all your tools</span>
       </h2>
       
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* Automations Card */}
-          <div className="relative group animate-slide-in-left flex flex-col">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-xl" />
-            <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-emerald-500/30 flex flex-col h-full">
-              <div className="flex items-center justify-center mb-5">
-                <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl flex items-center justify-center">
-                  <Workflow className="w-12 h-12 text-emerald-400" />
+        {/* Main value proposition */}
+        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-8 border border-emerald-500/30 mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            {/* Central brain visual */}
+            <div className="flex-shrink-0">
+              <div className="relative">
+                <div className="w-32 h-32 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-3xl flex items-center justify-center border-2 border-emerald-400/50 shadow-xl shadow-emerald-500/20">
+                  <Brain className="w-16 h-16 text-emerald-400" />
               </div>
+                <div className="absolute -top-2 -right-2 px-4 py-1.5 bg-emerald-500 border-2 border-emerald-300 rounded-full shadow-lg">
+                  <span className="text-white font-black text-sm tracking-wider">SIC</span>
             </div>
-              <h3 className="text-2xl font-bold text-white mb-3 text-center">Automations</h3>
-              <p className="text-lg text-slate-300 mb-4 text-center leading-relaxed">
-                "When X happens, Y is done across your tools."
-              </p>
-              <div className="space-y-2 flex-grow">
-                <div className="flex items-center space-x-2 text-slate-400">
-                  <ArrowRight className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm">Doc chase</span>
                 </div>
-                <div className="flex items-center space-x-2 text-slate-400">
-                  <ArrowRight className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm">Status sync</span>
             </div>
-                <div className="flex items-center space-x-2 text-slate-400">
-                  <ArrowRight className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm">Reconciliation</span>
-          </div>
+
+            {/* Copy */}
+            <div className="flex-1 text-center lg:text-left">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                Shoofly Intelligence Cloud (SIC) = your <span className="text-emerald-400">owned, managed AI brain</span>
+              </h3>
+              <ul className="space-y-3 text-lg text-slate-300">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Connects your apps + databases + workflows into <span className="text-white font-semibold">one intelligence layer</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Swap models <span className="text-white font-semibold">without losing your playbooks</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Feed everything into a <span className="text-white font-semibold">custom dashboard</span> (single pane of truth)</span>
+                </li>
+              </ul>
         </div>
               </div>
             </div>
 
-          {/* Assistants Card */}
-          <div className="relative group animate-slide-in-up flex flex-col" style={{ animationDelay: '0.1s' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl" />
-            <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30 flex flex-col h-full">
-              <div className="flex items-center justify-center mb-5">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center">
-                  <MessageSquare className="w-12 h-12 text-blue-400" />
+        {/* Visual: Central brain with connectors to tools + dashboard */}
+        <div className="bg-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+            {/* Left tools */}
+            <div className="flex flex-col gap-3">
+              {[
+                { icon: '🎙️', name: 'Fireflies' },
+                { icon: '📊', name: 'QuickBooks' },
+              ].map((tool, idx) => (
+                <div key={idx} className="flex items-center gap-2">
+                  <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-600/50 flex items-center justify-center">
+                    <span className="text-xl">{tool.icon}</span>
                 </div>
+                  <span className="text-xs text-slate-400 hidden sm:block">{tool.name}</span>
             </div>
-              <h3 className="text-2xl font-bold text-white mb-3 text-center">Assistants</h3>
-              <p className="text-lg text-slate-300 mb-4 text-center leading-relaxed">
-                "Ask and act in natural language. Talk to your data."
-              </p>
-              <div className="bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 flex-grow flex items-center">
-                <div className="flex items-start space-x-2 w-full">
-                  <Brain className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-slate-400 italic">"Ask your dashboard" - answers appear instantly</p>
+              ))}
       </div>
-    </div>
-                  </div>
+
+            {/* Connector dots */}
+            <div className="flex flex-col gap-1">
+              <div className="w-1 h-1 bg-emerald-400 rounded-full" />
+              <div className="w-1 h-1 bg-emerald-400 rounded-full" />
+              <div className="w-1 h-1 bg-emerald-400 rounded-full" />
                 </div>
 
-          {/* AI Agents Card */}
-          <div className="relative group animate-slide-in-right flex flex-col">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl" />
-            <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30 flex flex-col h-full">
-              <div className="flex items-center justify-center mb-5">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center">
-                  <Users className="w-12 h-12 text-purple-400" />
+            {/* Central SIC brain */}
+            <div className="relative mx-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-2xl flex items-center justify-center border-2 border-emerald-400/50 shadow-lg shadow-emerald-500/20">
+                <Brain className="w-10 h-10 text-emerald-400" />
                       </div>
-                    </div>
-              <h3 className="text-2xl font-bold text-white mb-3 text-center">AI Agents</h3>
-              <p className="text-lg text-slate-300 mb-4 text-center leading-relaxed">
-                Virtual employees with memory and permissions.
-              </p>
-              <div className="space-y-2 flex-grow">
-                <div className="flex items-start space-x-2 text-slate-400">
-                  <Shield className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Watch for events, recall context</span>
-                </div>
-                <div className="flex items-start space-x-2 text-slate-400">
-                  <Shield className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Take approved actions across tools</span>
-                </div>
-                <div className="flex items-start space-x-2 text-slate-400">
-                  <Shield className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Follow SOPs, escalate, log steps</span>
-                  </div>
-                </div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-2 py-0.5 bg-emerald-500 border border-emerald-300 rounded-md">
+                <span className="text-white font-bold text-[8px] tracking-wide">SIC</span>
               </div>
-            </div>
           </div>
 
-        {/* Footer - Enhanced with Custom Dashboard info */}
-        <div className="mt-10 mb-20 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <div className="relative bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 rounded-xl border border-emerald-400/30 backdrop-blur-sm p-3">
-            <div className="flex flex-col items-center space-y-2.5">
-              {/* Product flow */}
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center space-x-1.5">
-                  <div className="w-6 h-6 bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded flex items-center justify-center border border-emerald-400/30">
-                    <Workflow className="w-3.5 h-3.5 text-emerald-400" />
-              </div>
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded flex items-center justify-center border border-blue-400/30">
-                    <MessageSquare className="w-3.5 h-3.5 text-blue-400" />
-              </div>
-                  <div className="w-6 h-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded flex items-center justify-center border border-purple-400/30">
-                    <Users className="w-3.5 h-3.5 text-purple-400" />
-            </div>
-              </div>
-                <ArrowRight className="w-4 h-4 text-emerald-400 mx-1" />
-                <div className="px-3 py-1 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded border border-emerald-400/40">
-                  <span className="text-emerald-400 font-semibold text-xs">SIC</span>
-                </div>
-                <ArrowRight className="w-4 h-4 text-emerald-400 mx-1" />
-                <div className="px-4 py-1 bg-gradient-to-r from-emerald-500/30 to-blue-500/30 rounded-full border border-emerald-400/50">
-                  <span className="text-white font-semibold text-xs">Agentic Operating System</span>
-              </div>
+            {/* Connector dots */}
+            <div className="flex flex-col gap-1">
+              <div className="w-1 h-1 bg-blue-400 rounded-full" />
+              <div className="w-1 h-1 bg-blue-400 rounded-full" />
+              <div className="w-1 h-1 bg-blue-400 rounded-full" />
             </div>
 
-              {/* Custom Dashboard note */}
-              <div className="text-center">
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full border border-blue-400/30">
-                  <BarChart3 className="w-4 h-4 text-blue-400" />
-                  <span className="text-blue-300 font-semibold text-sm">
-                    <span className="text-white font-bold">Custom Dashboard</span> — your window into Automations, Assistants, and Agents
-                  </span>
+            {/* Right side: Dashboard */}
+            <div className="flex items-center gap-2">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/50 flex items-center justify-center">
+                <BarChart3 className="w-8 h-8 text-blue-400" />
               </div>
-                <p className="text-slate-400 text-xs mt-2">
-                  Included free with Agentic Operating System
-                </p>
+              <div className="hidden sm:block">
+                <span className="text-sm text-white font-semibold">Dashboard</span>
+                <p className="text-xs text-slate-400">Single pane of truth</p>
               </div>
             </div>
           </div>
@@ -716,454 +671,526 @@ const ROICalculatorModal: React.FC<ROICalculatorModalProps> = ({ isOpen, onClose
   );
 };
 
-// Slide 5 - Outcomes We Deliver (Immersive)
+// Slide 5 - You Own It. We Operate It.
 const Slide5: React.FC<SlideProps> = ({ isActive }) => {
-  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  
-  const outcomes = [
-    { 
-      icon: Clock, 
-      title: 'Hours back', 
-      stat: '20+ hrs/week',
-      impact: 'Time saved',
-      example: 'Campaign planning: 4hrs → 1hr',
-      color: 'emerald'
-    },
-    { 
-      icon: Zap, 
-      title: 'Faster execution', 
-      stat: 'Minutes not days',
-      impact: 'Speed increase',
-      example: 'Brief generation: instant',
-      color: 'blue'
-    },
-    { 
-      icon: Database, 
-      title: 'One source of truth', 
-      stat: '100% accuracy',
-      impact: 'Data quality',
-      example: 'All systems synced real-time',
-      color: 'cyan'
-    },
-    { 
-      icon: MessageSquare, 
-      title: 'Ask anything', 
-      stat: 'Natural language',
-      impact: 'Zero learning curve',
-      example: '"Show Q4 performance" → done',
-      color: 'purple'
-    },
-    { 
-      icon: BarChart3, 
-      title: 'Single-pane control', 
-      stat: 'One dashboard',
-      impact: 'Unified view',
-      example: 'Search, trigger actions, track results',
-      color: 'blue'
-    }
-  ];
-
   return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden py-4 pb-20">
-      {/* Simplified background */}
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-blue-950/20 to-slate-950 relative overflow-hidden py-8 pb-32">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/3 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-10 text-white animate-fade-in-up tracking-tight text-center">
-          Outcomes We Deliver
-      </h2>
-
-        {/* CTA Button */}
-        <div className="flex justify-center mb-8 animate-fade-in-up">
-          <button
-            onClick={() => setIsCalculatorOpen(true)}
-            className="group flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-400 hover:to-blue-400 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:scale-105"
-          >
-            <Calculator className="w-5 h-5 text-white" />
-            <span className="text-white font-semibold">See how this translates into dollars</span>
-            <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
-          {/* Left: Simplified outcomes */}
-          <div className="space-y-4 animate-slide-in-left">
-            {outcomes.map((outcome, idx) => (
-              <div key={idx} className="flex items-center space-x-4 p-5 bg-slate-800/40 backdrop-blur-sm rounded-xl border border-slate-700/30 hover:border-slate-600/50 transition-all">
-                <div className={`w-12 h-12 rounded-lg bg-${outcome.color}-500/10 flex items-center justify-center flex-shrink-0`}>
-                  <outcome.icon className={`w-6 h-6 text-${outcome.color}-400`} />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-semibold text-white mb-1">{outcome.title}</h3>
-                  <div className={`text-lg font-bold text-${outcome.color}-400`}>{outcome.stat}</div>
-                </div>
-              </div>
-            ))}
-              </div>
-
-          {/* Right: Custom Dashboard - Real Dashboard Look */}
-          <div className="flex items-center justify-center animate-slide-in-right">
-            <div className="relative w-full max-w-5xl">
-              <div className="bg-slate-800/60 backdrop-blur-xl rounded-2xl border border-slate-700/40 overflow-hidden shadow-xl">
-                {/* Dashboard Header */}
-                <div className="px-6 py-4 border-b border-slate-700/30 bg-slate-900/30">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <BarChart3 className="w-5 h-5 text-emerald-400" />
-                      <span className="text-white font-semibold text-base">Custom Dashboard</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-slate-400">Live</div>
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Dashboard Content */}
-                <div className="p-6 bg-slate-900/20">
-                  {/* Stats Row */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                      <div className="flex items-center justify-between mb-2">
-                        <Workflow className="w-5 h-5 text-emerald-400" />
-                        <span className="text-emerald-400 text-xs font-medium">+23%</span>
-              </div>
-                      <div className="text-2xl font-black text-emerald-400 mb-1">3</div>
-                      <div className="text-slate-400 text-xs mb-2">active workflows</div>
-                      {/* Mini Chart */}
-                      <div className="flex items-end space-x-1 h-8 mt-2">
-                        <div className="flex-1 bg-emerald-400/40 rounded-t" style={{ height: '60%' }} />
-                        <div className="flex-1 bg-emerald-400/40 rounded-t" style={{ height: '80%' }} />
-                        <div className="flex-1 bg-emerald-400/40 rounded-t" style={{ height: '70%' }} />
-                        <div className="flex-1 bg-emerald-400 rounded-t" style={{ height: '100%' }} />
-            </div>
-          </div>
-                    <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                      <div className="flex items-center justify-between mb-2">
-                        <MessageSquare className="w-5 h-5 text-blue-400" />
-                        <span className="text-blue-400 text-xs font-medium">+45%</span>
-      </div>
-                      <div className="text-2xl font-black text-blue-400 mb-1">12</div>
-                      <div className="text-slate-400 text-xs mb-2">queries today</div>
-                      {/* Mini Chart */}
-                      <div className="flex items-end space-x-1 h-8 mt-2">
-                        <div className="flex-1 bg-blue-400/40 rounded-t" style={{ height: '50%' }} />
-                        <div className="flex-1 bg-blue-400/40 rounded-t" style={{ height: '70%' }} />
-                        <div className="flex-1 bg-blue-400/40 rounded-t" style={{ height: '60%' }} />
-                        <div className="flex-1 bg-blue-400 rounded-t" style={{ height: '90%' }} />
-    </div>
-                  </div>
-                    <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                      <div className="flex items-center justify-between mb-2">
-                        <Users className="w-5 h-5 text-purple-400" />
-                        <span className="text-purple-400 text-xs font-medium">+12%</span>
-                      </div>
-                      <div className="text-2xl font-black text-purple-400 mb-1">5</div>
-                      <div className="text-slate-400 text-xs mb-2">agents monitoring</div>
-                      {/* Mini Chart */}
-                      <div className="flex items-end space-x-1 h-8 mt-2">
-                        <div className="flex-1 bg-purple-400/40 rounded-t" style={{ height: '70%' }} />
-                        <div className="flex-1 bg-purple-400/40 rounded-t" style={{ height: '85%' }} />
-                        <div className="flex-1 bg-purple-400/40 rounded-t" style={{ height: '75%' }} />
-                        <div className="flex-1 bg-purple-400 rounded-t" style={{ height: '100%' }} />
-                    </div>
-                  </div>
-                </div>
-
-                  {/* Main Dashboard Widgets */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    {/* Ask Widget */}
-                    <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <MessageSquare className="w-5 h-5 text-emerald-400" />
-                        <span className="text-white font-semibold text-sm">Ask</span>
-                  </div>
-                      <div className="bg-slate-800/60 rounded-lg p-3 mb-2">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                          <span className="text-slate-300 text-xs">Show Q4 performance</span>
-                        </div>
-                        <div className="flex items-center justify-between pt-2 border-t border-slate-700/50">
-                          <div className="text-lg font-bold text-emerald-400">+197%</div>
-                          <div className="text-base font-semibold text-blue-400">$2.1M</div>
-                    </div>
-                  </div>
-                </div>
-
-                    {/* Act Widget */}
-                    <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <Play className="w-5 h-5 text-blue-400" />
-                        <span className="text-white font-semibold text-sm">Act</span>
-                  </div>
-                      <div className="bg-slate-800/60 rounded-lg p-3">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-slate-300 text-xs">Pending</span>
-                          <span className="text-emerald-400 font-bold text-base">3</span>
-                    </div>
-                        <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg px-3 py-2 text-xs text-white font-medium">
-                          Review All
-                        </button>
-                  </div>
-                </div>
-
-                    {/* Audit Widget */}
-                    <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <Shield className="w-5 h-5 text-purple-400" />
-                        <span className="text-white font-semibold text-sm">Audit</span>
-              </div>
-                      <div className="bg-slate-800/60 rounded-lg p-3">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-slate-300 text-xs">Last export</span>
-                          <span className="text-purple-400 text-xs">2h ago</span>
-                        </div>
-                        <div className="w-full bg-slate-900/50 rounded-full h-1.5">
-                          <div className="bg-purple-400 rounded-full h-1.5" style={{ width: '85%' }} />
-                        </div>
-            </div>
-          </div>
-        </div>
-
-                  {/* Activity Timeline */}
-                  <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <Activity className="w-5 h-5 text-emerald-400" />
-                      <span className="text-white font-semibold text-sm">Recent Activity</span>
-              </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2 text-xs text-slate-400">
-                        <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                        <span className="flex-1">Status sync completed</span>
-                        <span className="text-slate-500">2m ago</span>
-          </div>
-                      <div className="flex items-center space-x-2 text-xs text-slate-400">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
-                        <span className="flex-1">Assistant queried data</span>
-                        <span className="text-slate-500">5m ago</span>
-        </div>
-      </div>
-    </div>
-
-                  {/* Footer */}
-                  <div className="text-center pt-4 mt-4 border-t border-slate-700/30">
-                    <div className="text-slate-400 text-xs">
-                      Powered by <span className="text-emerald-400 font-semibold">Shoofly Intelligence Cloud</span>
-            </div>
-          </div>
-      </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ROI Calculator Modal */}
-      <ROICalculatorModal 
-        isOpen={isCalculatorOpen} 
-        onClose={() => setIsCalculatorOpen(false)} 
-      />
-    </div>
-  );
-};
-
-// Slide 7 - Two Clear Ways Into the Catalog
-const Slide7: React.FC<SlideProps> = ({ isActive }) => {
-  return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden py-8 pb-32">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(16, 185, 129, 0.3) 1px, transparent 0)',
-          backgroundSize: '50px 50px'
-        }} />
-      </div>
-
-      <h2 className="text-5xl sm:text-6xl font-bold mb-16 text-white animate-fade-in-up tracking-tight relative z-10 text-center">
-        Two Clear Ways In
-      </h2>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl relative z-10 mb-12">
-        {/* Advisory-first */}
-        <div className="relative group animate-slide-in-left">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all" />
-          <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-2xl rounded-3xl p-10 border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 shadow-2xl shadow-emerald-500/10 h-full">
-            <div className="flex items-center justify-center mb-8">
-              <div className="px-6 py-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-full border border-emerald-400/40">
-                <span className="text-emerald-300 text-xl font-semibold">Advisory-First</span>
-                </div>
-                </div>
-            <div className="flex items-center justify-center mb-8">
-              <Lightbulb className="w-20 h-20 text-emerald-400" />
-                </div>
-            <div className="space-y-4">
-              {[
-                '90-min working session',
-                'KPI map & backlog',
-                'Optional co-build webinar for accountants',
-                'Then ladder to pilot or OS'
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-3 p-4 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-xl border border-emerald-500/20 hover:border-emerald-400/40 transition-all">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-white text-lg font-medium">{item}</span>
-                  </div>
-              ))}
-                </div>
-              </div>
-            </div>
-
-        {/* Pilot-first */}
-        <div className="relative group animate-slide-in-right">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all" />
-          <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-2xl rounded-3xl p-10 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 shadow-2xl shadow-blue-500/10 h-full">
-            <div className="flex items-center justify-center mb-8">
-              <div className="px-6 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/40">
-                <span className="text-blue-300 text-xl font-semibold">Pilot-First</span>
-              </div>
-            </div>
-            <div className="flex items-center justify-center mb-8">
-              <Zap className="w-20 h-20 text-blue-400" />
-            </div>
-            <div className="space-y-4">
-              {[
-                '30-day Proof-of-Value',
-                'Or "Free 1 Workflow" for qualified teams',
-                'Then upgrade to paid pilot',
-                'Ladder to Sprint → OS'
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-3 p-4 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all">
-                  <CheckCircle2 className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-white text-lg font-medium">{item}</span>
-          </div>
-        ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer note */}
-      <div className="text-center animate-fade-in-up relative z-10" style={{ animationDelay: '0.6s' }}>
-        <div className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-full border border-emerald-400/30">
-          <ArrowRight className="w-5 h-5 text-emerald-400" />
-          <p className="text-lg text-emerald-300 font-semibold">
-            Pilot → Sprint → OS
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Slide 6 - Your Custom Dashboard — the control plane
-const Slide6: React.FC<SlideProps> = ({ isActive }) => {
-  return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
-      {/* Simplified background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-3 text-white animate-fade-in-up tracking-tight text-center">
-          Your Custom Dashboard — the control plane
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          Ownership without the
         </h2>
-        <p className="text-lg text-slate-400 mb-10 text-center animate-fade-in-up max-w-2xl mx-auto" style={{ animationDelay: '0.2s' }}>
-          One window across your tools to see, ask, and act in real time.
-        </p>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 text-transparent bg-clip-text">operational burden</span>
+      </h2>
 
-        {/* Dashboard Mockup */}
-        <div className="relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <div className="relative bg-slate-800/60 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/40 shadow-xl overflow-hidden">
-            {/* Dashboard Header */}
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-700/30">
-              <div className="flex items-center space-x-2">
-                <BarChart3 className="w-5 h-5 text-emerald-400" />
-                <span className="text-white font-semibold text-base">Custom Dashboard</span>
-            </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                <span className="text-emerald-400 text-xs">Live</span>
-          </div>
+        {/* Two column layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* You Own */}
+          <div className="relative group animate-slide-in-left">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-xl" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-emerald-500/30 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-emerald-400" />
         </div>
-
-            {/* Top Row: Products */}
-            <div className="grid grid-cols-3 gap-4 mb-6">
-              {/* Automation */}
-              <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                <div className="flex items-center space-x-2 mb-3">
-                  <Workflow className="w-5 h-5 text-emerald-400" />
-                  <span className="text-white font-semibold text-sm">Automation</span>
+                <h3 className="text-2xl font-bold text-white">You Own</h3>
                 </div>
-                <div className="text-slate-400 text-xs mb-2">3 active workflows</div>
-                <div className="w-full bg-slate-800/60 rounded-full h-2">
-                  <div className="bg-emerald-400 rounded-full h-2" style={{ width: '70%' }} />
-                      </div>
+              <ul className="space-y-4">
+                {[
+                  'Code & workflows',
+                  'Dashboard schema & widgets',
+                  'Intelligence artifacts & playbooks',
+                  'Your data—always'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                    <span className="text-lg text-slate-200">{item}</span>
+                  </li>
+                ))}
+              </ul>
+                </div>
+              </div>
+
+          {/* We Operate */}
+          <div className="relative group animate-slide-in-right">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                  <Wrench className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">We Operate</h3>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  'Integrations & API changes',
+                  'Security + access controls',
+                  'Uptime & monitoring',
+                  'Governance & auditability'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                    <span className="text-lg text-slate-200">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+              </div>
+
+        {/* Fireflies example callout */}
+        <div className="bg-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Sparkles className="w-5 h-5 text-purple-400" />
                     </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-2">Real example: API deprecation protection</h4>
+              <p className="text-slate-300">
+                When Fireflies deprecated V1 and migrated to V2, we handled the entire migration. <span className="text-purple-400 font-semibold">Your workflows never broke</span>. This is why managed operations matter.
+              </p>
+                    </div>
+                  </div>
+                </div>
 
-              {/* Assistant */}
-              <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                <div className="flex items-center space-x-2 mb-3">
-                  <MessageSquare className="w-5 h-5 text-blue-400" />
-                  <span className="text-white font-semibold text-sm">Assistant</span>
+        {/* Handoff ready badge */}
+        <div className="mt-8 text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-500/40 rounded-full">
+            <ArrowRight className="w-5 h-5 text-emerald-400" />
+            <span className="text-lg font-semibold text-emerald-300">Handoff-ready: acquisition, vendor change, or internal team takeover</span>
               </div>
-                <div className="text-slate-400 text-xs mb-2">12 queries today</div>
-                <div className="w-full bg-slate-800/60 rounded-full h-2">
-                  <div className="bg-blue-400 rounded-full h-2" style={{ width: '60%' }} />
             </div>
           </div>
+      </div>
+  );
+};
 
-              {/* Agent */}
-              <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                <div className="flex items-center space-x-2 mb-3">
-                  <Users className="w-5 h-5 text-purple-400" />
-                  <span className="text-white font-semibold text-sm">Agent</span>
-            </div>
-                <div className="text-slate-400 text-xs mb-2">5 agents monitoring</div>
-                <div className="w-full bg-slate-800/60 rounded-full h-2">
-                  <div className="bg-purple-400 rounded-full h-2" style={{ width: '80%' }} />
-            </div>
-              </div>
-            </div>
-            
-            {/* Bottom Row: Features */}
-            <div className="grid grid-cols-3 gap-4 mb-6">
-              {/* Ask */}
-              <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                <div className="flex items-center space-x-2 mb-2">
-                  <MessageSquare className="w-5 h-5 text-emerald-400" />
-                  <span className="text-white font-semibold text-sm">Ask</span>
-              </div>
-                <div className="text-emerald-400 text-xs font-medium mb-1">→ answers</div>
-                <div className="text-slate-400 text-xs">Plain-English queries</div>
-            </div>
+// Slide 7 - The Shoofly Method: Build AI That Actually Ships
+const Slide7: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative overflow-hidden py-8 pb-32">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(168, 85, 247, 0.3) 1px, transparent 0)',
+          backgroundSize: '50px 50px'
+        }} />
+    </div>
 
-              {/* Act */}
-              <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Play className="w-5 h-5 text-blue-400" />
-                  <span className="text-white font-semibold text-sm">Act</span>
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          The 3-Phase Path to an
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">Agentic OS</span>
+        </h2>
+
+        {/* Maturity Staircase */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* Phase 1 */}
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-xl" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 border border-emerald-500/30 h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+                  <span className="text-emerald-400 font-bold text-lg">1</span>
+                  </div>
+                <h3 className="text-xl font-bold text-white">Business Strategy</h3>
+                      </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-slate-300">
+                  <Target className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+                  <span>Pick KPI(s) to optimize</span>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <BarChart3 className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+                  <span>Establish baseline metrics</span>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <FileCheck className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+                  <span>Define success criteria</span>
+                </li>
+              </ul>
+                    </div>
           </div>
-                <div className="text-blue-400 text-xs font-medium mb-1">→ one-click</div>
-                <div className="text-slate-400 text-xs">Actions & approvals</div>
+
+          {/* Phase 2 */}
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 border border-blue-500/30 h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                  <span className="text-blue-400 font-bold text-lg">2</span>
+                </div>
+                <h3 className="text-xl font-bold text-white">Data & Systems</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-slate-300">
+                  <Database className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                  <span>Map existing tools</span>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <Network className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                  <span>Connect sources of truth</span>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <Shield className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                  <span>Set up access controls</span>
+                </li>
+              </ul>
+                  </div>
+                </div>
+
+          {/* Phase 3 */}
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-6 border border-purple-500/30 h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                  <span className="text-purple-400 font-bold text-lg">3</span>
+                  </div>
+                <h3 className="text-xl font-bold text-white">Agentic OS</h3>
+                        </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-slate-300">
+                  <Workflow className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span>Deploy Automations</span>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <MessageSquare className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span>Add Assistants</span>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <Users className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span>Launch Agents</span>
+                </li>
+              </ul>
+                    </div>
+                  </div>
+                </div>
+
+        {/* All visible in dashboard */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/40 rounded-2xl">
+            <BarChart3 className="w-6 h-6 text-purple-400" />
+            <span className="text-lg font-semibold text-white">All visible in your <span className="text-purple-400">Custom Dashboard</span></span>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+  );
+};
+
+// Slide 6 - Why Now: AI Is Unbundling SaaS
+const Slide6: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-cyan-950/20 to-slate-950 relative overflow-hidden pb-32">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+              </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          What eCommerce did to malls,
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-400 text-transparent bg-clip-text">AI is doing to SaaS</span>
+        </h2>
+
+        {/* Three bullet points */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/20 h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <DollarSign className="w-8 h-8 text-cyan-400" />
+                <h3 className="text-lg font-bold text-white">Development is Cheap</h3>
+                        </div>
+              <p className="text-slate-300 leading-relaxed">
+                Building is <span className="text-cyan-400 font-semibold">dramatically cheaper and faster</span> now. What took months takes hours.
+              </p>
+                        </div>
+            </div>
+
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-blue-500/20 h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <Rocket className="w-8 h-8 text-blue-400" />
+                <h3 className="text-lg font-bold text-white">Internal Tools Fast</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Internal tools can be <span className="text-blue-400 font-semibold">built in hours</span>, not months. Custom solutions are now accessible.
+              </p>
+          </div>
         </div>
+
+          <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-6 border border-emerald-500/20 h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <Shield className="w-8 h-8 text-emerald-400" />
+                <h3 className="text-lg font-bold text-white">Own the Stack</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                You can finally <span className="text-emerald-400 font-semibold">"own the stack"</span> instead of renting it from vendors.
+              </p>
+          </div>
+        </div>
+      </div>
+
+        {/* Visual: SaaS bundle → modular components */}
+        <div className="bg-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            {/* Old way: SaaS Bundle */}
+            <div className="text-center">
+              <div className="w-24 h-24 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center mx-auto mb-3">
+                <div className="text-4xl">📦</div>
+              </div>
+              <p className="text-slate-400 text-sm">Bundled SaaS</p>
+              <p className="text-red-400 text-xs">Pay for features you don't use</p>
+    </div>
+
+            {/* Arrow */}
+            <div className="hidden md:flex items-center">
+              <ArrowRight className="w-8 h-8 text-cyan-400" />
+            </div>
+
+            {/* New way: Modular */}
+            <div className="text-center">
+              <div className="flex items-center gap-2 mb-3 justify-center">
+                <div className="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                  <Workflow className="w-6 h-6 text-emerald-400" />
+          </div>
+                <div className="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
+                  <MessageSquare className="w-6 h-6 text-blue-400" />
+      </div>
+                <div className="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center">
+                  <Users className="w-6 h-6 text-purple-400" />
+              </div>
+            </div>
+              <p className="text-slate-300 text-sm font-semibold">Modular Components</p>
+              <p className="text-emerald-400 text-xs">Build exactly what you need</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  );
+};
+
+// Slide 8 - What We Build: Automations, Assistants, Agents (3 Building Blocks)
+const Slide8: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          Three building blocks.
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-emerald-400 to-blue-400 text-transparent bg-clip-text">One operating system.</span>
+      </h2>
+      
+        {/* Three Building Blocks Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl relative z-10 mb-10">
+          {/* Automations */}
+          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-emerald-500/30 h-full">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center">
+                  <Workflow className="w-8 h-8 text-emerald-400" />
+                </div>
+                </div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Automations</h3>
+              <p className="text-lg text-slate-300 mb-6 text-center">
+                <span className="text-emerald-400 font-semibold">"When X happens → Y happens"</span> across tools
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Doc chase & status sync</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Nightly reconciliation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Smart routing & triggers</span>
+                </li>
+              </ul>
+                </div>
+                  </div>
+
+          {/* Assistants */}
+          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30 h-full">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center">
+                  <MessageSquare className="w-8 h-8 text-blue-400" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Assistants</h3>
+              <p className="text-lg text-slate-300 mb-6 text-center">
+                <span className="text-blue-400 font-semibold">"Ask + Act"</span> in natural language on your data
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">"Show Q4 performance" → done</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">"Draft campaign brief" → done</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Zero learning curve</span>
+                </li>
+              </ul>
+              </div>
+            </div>
+
+          {/* Agents */}
+          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
+            <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30 h-full">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
+                  <Users className="w-8 h-8 text-purple-400" />
+              </div>
+            </div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Agents</h3>
+              <p className="text-lg text-slate-300 mb-6 text-center">
+                <span className="text-purple-400 font-semibold">Always-on workers</span> with memory + permissions
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Watch for events & recall context</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Take approved actions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">Follow SOPs, escalate when needed</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+            </div>
+
+        {/* Footer: All connected through SIC */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-700/50">
+            <div className="flex items-center gap-2">
+              <Workflow className="w-5 h-5 text-emerald-400" />
+              <ArrowRight className="w-4 h-4 text-slate-500" />
+              <Brain className="w-6 h-6 text-cyan-400" />
+              <ArrowRight className="w-4 h-4 text-slate-500" />
+              <BarChart3 className="w-5 h-5 text-blue-400" />
+          </div>
+            <span className="text-slate-300">All connected through <span className="text-cyan-400 font-semibold">SIC</span> → surfaced in your <span className="text-blue-400 font-semibold">Custom Dashboard</span></span>
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Slide 9 - Demo: 1 Workflow End-to-End
+const Slide9Demo: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-cyan-950/20 to-slate-950 relative overflow-hidden pb-32">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          A wedge workflow that
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-400 text-transparent bg-clip-text">proves value fast</span>
+        </h2>
+
+        {/* Workflow Flow Diagram */}
+        <div className="bg-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50 mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+            {/* Trigger */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-2xl bg-cyan-500/20 border border-cyan-500/50 flex items-center justify-center mb-3">
+                <Zap className="w-10 h-10 text-cyan-400" />
+            </div>
+              <h4 className="text-white font-semibold mb-1">Trigger</h4>
+              <p className="text-sm text-slate-400 max-w-[140px]">Meeting ends / doc received / form submitted</p>
+        </div>
+
+            {/* Arrow */}
+            <ArrowRight className="w-8 h-8 text-slate-500 hidden md:block" />
+            <div className="md:hidden w-1 h-8 bg-gradient-to-b from-cyan-500/50 to-blue-500/50 rounded-full" />
+
+            {/* AI Processing */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-2xl bg-blue-500/20 border border-blue-500/50 flex items-center justify-center mb-3">
+                <Brain className="w-10 h-10 text-blue-400" />
+              </div>
+              <h4 className="text-white font-semibold mb-1">AI Extracts</h4>
+              <p className="text-sm text-slate-400 max-w-[140px]">Decisions + action items + owners</p>
+          </div>
+
+            {/* Arrow */}
+            <ArrowRight className="w-8 h-8 text-slate-500 hidden md:block" />
+            <div className="md:hidden w-1 h-8 bg-gradient-to-b from-blue-500/50 to-emerald-500/50 rounded-full" />
+
+            {/* Action */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-2xl bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center mb-3">
+                <Send className="w-10 h-10 text-emerald-400" />
+              </div>
+              <h4 className="text-white font-semibold mb-1">One-Click</h4>
+              <p className="text-sm text-slate-400 max-w-[140px]">Send to CRM / Monday / Slack</p>
+            </div>
+
+            {/* Arrow */}
+            <ArrowRight className="w-8 h-8 text-slate-500 hidden md:block" />
+            <div className="md:hidden w-1 h-8 bg-gradient-to-b from-emerald-500/50 to-purple-500/50 rounded-full" />
 
               {/* Audit */}
-              <div className="bg-slate-700/40 rounded-xl p-4 border border-slate-600/30">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Shield className="w-5 h-5 text-purple-400" />
-                  <span className="text-white font-semibold text-sm">Audit</span>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-2xl bg-purple-500/20 border border-purple-500/50 flex items-center justify-center mb-3">
+                <FileCheck className="w-10 h-10 text-purple-400" />
               </div>
-                <div className="text-purple-400 text-xs font-medium mb-1">→ RBAC, logs</div>
-                <div className="text-slate-400 text-xs">Export anytime</div>
+              <h4 className="text-white font-semibold mb-1">Audit Log</h4>
+              <p className="text-sm text-slate-400 max-w-[140px]">Log everything for traceability</p>
+            </div>
             </div>
         </div>
 
-            {/* Footer */}
-            <div className="text-center pt-4 border-t border-slate-700/30">
-              <div className="text-slate-400 text-xs">
-                Powered by <span className="text-emerald-400 font-semibold">Shoofly Intelligence Cloud</span>
+        {/* Example: Fireflies → Action Items → Monday */}
+        <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/30 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <span className="text-2xl">🎙️</span>
               </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-2">Example: Meeting Intelligence</h4>
+              <p className="text-slate-300">
+                <span className="text-cyan-400 font-semibold">Fireflies transcript</span> → AI extracts action items → 
+                <span className="text-blue-400 font-semibold"> One-click to Monday</span> with owners & due dates → 
+                <span className="text-emerald-400 font-semibold"> Logged for audit</span>
+              </p>
             </div>
           </div>
         </div>
@@ -1172,11 +1199,11 @@ const Slide6: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
-// Slide 8 - Proof & Vertical Wedges (with product tags)
-const Slide8: React.FC<SlideProps> = ({ isActive }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isK12ModalOpen, setIsK12ModalOpen] = useState(false);
-  const [isContentEngineModalOpen, setIsContentEngineModalOpen] = useState(false);
+// Slide 10 - Proof: Real Results (K-12, CPA, Content Engine)
+const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [isK12ModalOpen, setIsK12ModalOpen] = React.useState(false);
+  const [isContentEngineModalOpen, setIsContentEngineModalOpen] = React.useState(false);
 
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
@@ -1184,231 +1211,178 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl animate-pulse-slow" />
       </div>
 
-      <h2 className="text-5xl sm:text-6xl font-bold mb-16 text-white animate-fade-in-up tracking-tight relative z-10 text-center">
-        Proof & Vertical Wedges
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
+          Proof across industries
+        </h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-emerald-400 to-blue-400 text-transparent bg-clip-text">(ROI in weeks)</span>
         </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl relative z-10">
-        {/* K-12 */}
-        <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-          <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-emerald-500/40 transition-all h-full flex flex-col">
-            {/* Single consolidated tag */}
-            <div className="flex justify-between items-start mb-6">
-              <span className="px-3 py-1.5 bg-slate-800/80 rounded-lg border border-slate-700/50 text-xs text-slate-400 font-medium">
-                Shown in dashboard
-              </span>
-              <span className="px-3 py-1.5 bg-emerald-500/10 rounded-lg border border-emerald-500/30 text-xs text-emerald-400 font-medium">
-                Assistant + SIC
-              </span>
-            </div>
-            
-            <div className="flex items-center justify-center mb-8">
-              <GraduationCap className="w-14 h-14 text-emerald-400" />
-            </div>
-            
-            <div className="relative mb-6">
-              <h3 className="text-3xl font-bold text-white mb-2 text-center group-hover:opacity-0 transition-opacity duration-200 md:block hidden">
-                K-12
-              </h3>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsK12ModalOpen(true);
-                }}
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-emerald-400 hover:text-emerald-300 font-semibold text-lg cursor-pointer z-10 md:flex hidden"
+        {/* Three Proof Tiles */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl relative z-10 mb-10">
+          {/* K-12 Social Scoring */}
+          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+            <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-emerald-500/40 transition-all h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+                  <GraduationCap className="w-6 h-6 text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">K-12 Social Scoring</h3>
+                  <span className="text-xs text-emerald-400">Assistant + SIC</span>
+                </div>
+              </div>
+              <div className="space-y-3 mb-4 flex-grow">
+                <div className="text-sm text-slate-400">
+                  <span className="text-slate-300 font-medium">Problem:</span> Manual quarterly audit
+                </div>
+                <div className="text-sm text-slate-400">
+                  <span className="text-slate-300 font-medium">Build:</span> Automated crawl + scoring
+                </div>
+                <div className="text-sm text-emerald-400 font-semibold">
+                  Result: 80 hrs → ~2.5 hrs + human review
+                </div>
+              </div>
+              <div className="bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 text-center">
+                <div className="text-2xl font-bold text-emerald-400">18 hrs</div>
+                <div className="text-xs text-slate-400">saved this week</div>
+              </div>
+              <button
+                onClick={() => setIsK12ModalOpen(true)}
+                className="mt-4 w-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-medium py-2 rounded-lg transition-all text-sm"
               >
                 View Demo →
-              </a>
-              {/* Mobile/Tablet: Always visible button */}
-              <div className="md:hidden flex flex-col items-center">
-                <h3 className="text-3xl font-bold text-white mb-4 text-center">K-12</h3>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsK12ModalOpen(true);
-                  }}
-                  className="bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-medium px-6 py-2.5 rounded-lg transition-all"
-                >
-                  View Demo →
-                </button>
-              </div>
+              </button>
             </div>
-            
-            <div className="space-y-4 mb-6 flex-grow">
-              <div className="flex items-start space-x-3">
-                <MessageSquare className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">"<span className="text-emerald-400 font-medium">Ask your dashboard</span>" to review social at scale</p>
+          </div>
+
+          {/* CPA Firm Operations */}
+          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+            <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/40 transition-all h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">CPA Firm Ops</h3>
+                  <span className="text-xs text-blue-400">Automations + SIC</span>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <Network className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">112 schools, one unified voice</p>
+              <div className="space-y-3 mb-4 flex-grow">
+                <div className="text-sm text-slate-400">
+                  <span className="text-slate-300 font-medium">Problem:</span> Owner bottleneck (calls/email)
+                </div>
+                <div className="text-sm text-slate-400">
+                  <span className="text-slate-300 font-medium">Build:</span> DocuSign auto-updates + nightly reconciliation
+                </div>
+                <div className="text-sm text-blue-400 font-semibold">
+                  Result: Smart routing + CRM ↔ QuickBooks sync
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <TrendingUp className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">10× capacity increase</p>
+              <div className="bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 text-center">
+                <div className="text-2xl font-bold text-blue-400">6 hrs</div>
+                <div className="text-xs text-slate-400">saved this week</div>
               </div>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="mt-4 w-full bg-blue-500/10 hover:bg-blue-500/20 border border-blue-400/30 text-blue-300 font-medium py-2 rounded-lg transition-all text-sm"
+              >
+                View Demo →
+              </button>
             </div>
-            
-            {/* Mini KPI Card */}
-            <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">18 hrs</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wide">Time saved this week</div>
+          </div>
+
+          {/* Content / Marketing Ops */}
+          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+            <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/40 transition-all h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-purple-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Content Engine</h3>
+                  <span className="text-xs text-purple-400">Full Automation</span>
+                </div>
               </div>
+              <div className="space-y-3 mb-4 flex-grow">
+                <div className="text-sm text-slate-400">
+                  <span className="text-slate-300 font-medium">Problem:</span> Manual research to publish
+                </div>
+                <div className="text-sm text-slate-400">
+                  <span className="text-slate-300 font-medium">Build:</span> Automated pipeline
+                </div>
+                <div className="text-sm text-purple-400 font-semibold">
+                  Result: 730% ROI in 4 months
+                </div>
+              </div>
+              <div className="bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 text-center">
+                <div className="text-2xl font-bold text-purple-400">22 hrs</div>
+                <div className="text-xs text-slate-400">saved this week</div>
+              </div>
+              <button
+                onClick={() => setIsContentEngineModalOpen(true)}
+                className="mt-4 w-full bg-purple-500/10 hover:bg-purple-500/20 border border-purple-400/30 text-purple-300 font-medium py-2 rounded-lg transition-all text-sm"
+              >
+                View Demo →
+              </button>
             </div>
           </div>
         </div>
 
-        {/* CPA */}
-        <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-          <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/40 transition-all h-full flex flex-col">
-            {/* Single consolidated tag */}
-            <div className="flex justify-between items-start mb-6">
-              <span className="px-3 py-1.5 bg-slate-800/80 rounded-lg border border-slate-700/50 text-xs text-slate-400 font-medium">
-                Shown in dashboard
-              </span>
-              <span className="px-3 py-1.5 bg-blue-500/10 rounded-lg border border-blue-500/30 text-xs text-blue-400 font-medium">
-                Automations + SIC
-              </span>
-            </div>
-            
-            <div className="flex items-center justify-center mb-8">
-              <DollarSign className="w-14 h-14 text-blue-400" />
-            </div>
-            
-            <div className="relative mb-6">
-              <h3 className="text-3xl font-bold text-white mb-2 text-center group-hover:opacity-0 transition-opacity duration-200 md:block hidden">
-                CPA
-              </h3>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsModalOpen(true);
-                }}
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-blue-400 hover:text-blue-300 font-semibold text-lg cursor-pointer z-10 md:flex hidden"
-              >
-                View Demo →
+        {/* Testimonials Row - Minimal */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          {/* K-12 Testimonial */}
+          <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
+            <p className="text-slate-300 text-sm italic leading-relaxed mb-3">
+              "ShooflyAI helped bring Christmas magic to our families with AI Santa, enhancing our year-end fundraising goals."
+            </p>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-white text-xs font-semibold">Dan Vehar</p>
+                <p className="text-slate-500 text-xs">Marketing, Cobb County Schools</p>
+              </div>
+              <a href="https://shooflyai.com/cobbcounty" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-xs font-medium">
+                Case Study →
               </a>
-              {/* Mobile/Tablet: Always visible button */}
-              <div className="md:hidden flex flex-col items-center">
-                <h3 className="text-3xl font-bold text-white mb-4 text-center">CPA</h3>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsModalOpen(true);
-                  }}
-                  className="bg-blue-500/10 hover:bg-blue-500/20 border border-blue-400/30 text-blue-300 font-medium px-6 py-2.5 rounded-lg transition-all"
-                >
-                  View Demo →
-                </button>
-              </div>
             </div>
-            
-            <div className="space-y-4 mb-6 flex-grow">
-              <div className="flex items-start space-x-3">
-                <Workflow className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">Smart routing & status sync</p>
+          </div>
+
+          {/* CPA Testimonial */}
+          <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
+            <p className="text-slate-300 text-sm italic leading-relaxed mb-3">
+              "The preparers are the ones with the higher billing rates, and when they get more efficient, that's how we reduce our time and become more profitable."
+            </p>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-white text-xs font-semibold">Kendyl Strickland</p>
+                <p className="text-slate-500 text-xs">Firm Owner, Strickland CPA</p>
               </div>
-              <div className="flex items-start space-x-3">
-                <Activity className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">Nightly reconciliation</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <FileText className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300"><span className="font-medium">Phase 2:</span> 1099-K monitor + IRS MeF readiness</p>
-              </div>
+              <a href="https://shooflyai.com/data-reconciliation-case-study" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 text-xs font-medium">
+                Case Study →
+              </a>
             </div>
-            
-            {/* Mini KPI Card */}
-            <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">6 hrs</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wide">Time saved this week</div>
+          </div>
+
+          {/* Law Firm Testimonial */}
+          <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
+            <p className="text-slate-300 text-sm italic leading-relaxed mb-3">
+              "We have significantly increased our reach using AI avatars and marketing automation with ShooflyAI."
+            </p>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-white text-xs font-semibold">Chris Lowe</p>
+                <p className="text-slate-500 text-xs">Firm Director, Lowe Law</p>
               </div>
+              <a href="https://shooflyai.com/lowelaw" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 text-xs font-medium">
+                Case Study →
+              </a>
             </div>
           </div>
         </div>
-
-        {/* Content Engine */}
-        <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-          <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/40 transition-all h-full flex flex-col">
-            {/* Single consolidated tag */}
-            <div className="flex justify-between items-start mb-6">
-              <span className="px-3 py-1.5 bg-slate-800/80 rounded-lg border border-slate-700/50 text-xs text-slate-400 font-medium">
-                Shown in dashboard
-              </span>
-              <span className="px-3 py-1.5 bg-purple-500/10 rounded-lg border border-purple-500/30 text-xs text-purple-400 font-medium">
-                Automation outcomes
-              </span>
-            </div>
-            
-            <div className="flex items-center justify-center mb-8">
-              <Sparkles className="w-14 h-14 text-purple-400" />
-            </div>
-            
-            <div className="relative mb-6">
-              <h3 className="text-3xl font-bold text-white mb-2 text-center group-hover:opacity-0 transition-opacity duration-200 md:block hidden">
-                Content Engine
-              </h3>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsContentEngineModalOpen(true);
-                }}
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-purple-400 hover:text-purple-300 font-semibold text-lg cursor-pointer z-10 md:flex hidden"
-              >
-                View Demo →
-              </a>
-              {/* Mobile/Tablet: Always visible button */}
-              <div className="md:hidden flex flex-col items-center">
-                <h3 className="text-3xl font-bold text-white mb-4 text-center">Content Engine</h3>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsContentEngineModalOpen(true);
-                  }}
-                  className="bg-purple-500/10 hover:bg-purple-500/20 border border-purple-400/30 text-purple-300 font-medium px-6 py-2.5 rounded-lg transition-all"
-                >
-                  View Demo →
-                </button>
-              </div>
-            </div>
-            
-            <div className="space-y-4 mb-6 flex-grow">
-              <div className="flex items-start space-x-3">
-                <TrendingUp className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300"><span className="text-purple-400 font-bold text-xl">730% ROI</span> in 4 months</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Clock className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">&gt;20 hrs/week saved</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Lightbulb className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-sm text-slate-300">From research to multi-format publishing</p>
-              </div>
-            </div>
-            
-            {/* Mini KPI Card */}
-            <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-1">22 hrs</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wide">Time saved this week</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Partner note */}
-      <div className="mt-12 text-center text-sm text-slate-500 animate-fade-in-up relative z-10" style={{ animationDelay: '0.6s' }}>
-        <p>Leverage partner co-sell where available</p>
       </div>
 
       {/* CPA Modal */}
@@ -1440,7 +1414,7 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
             {/* Iframe Content */}
             <div className="relative w-full h-[calc(90vh-80px)]">
               <iframe
-                src="https://staging.d25gsvjhc7g9yz.amplifyapp.com/"
+                src="https://staging.d2oouzph28ekuq.amplifyapp.com/"
                 className="w-full h-full border-0"
                 title="CPA Demo"
                 allow="fullscreen"
@@ -2132,130 +2106,359 @@ const Slide10: React.FC<SlideProps> = ({ isActive }) => {
   );
 };
 
-// Slide 11 - Decide Now
-const Slide11: React.FC<SlideProps> = ({ isActive }) => {
+// Slide 11 - The Control Plane: Your Custom Dashboard
+const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
   return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center px-4 sm:px-8 lg:px-16 py-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
-      {/* Animated background particles */}
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-blue-950/20 to-slate-950 relative overflow-hidden pb-32">
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-emerald-400/20 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}
-          />
-        ))}
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="relative z-10 text-center max-w-7xl mx-auto w-full flex flex-col h-full">
-        <h2 className="text-5xl sm:text-6xl font-bold mb-0 text-white animate-fade-in-up tracking-tight flex-shrink-0 pt-8">
-          Decide Now
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 text-white animate-fade-in-up tracking-tight text-center">
+          One window to
+        </h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-up tracking-tight text-center">
+          <span className="bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">Ask, Act, and Audit</span>
         </h2>
 
-        {/* Content container - equal spacing from title and nav bar */}
-        <div className="flex-1 flex flex-col justify-center items-center">
-          {/* Three paths */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 w-full">
-            {/* Advisory-First */}
-            <div className="relative group animate-slide-in-left">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-              <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-2xl p-8 border border-emerald-500/30 hover:border-emerald-400/50 transition-all h-full">
-                <Lightbulb className="w-14 h-14 text-emerald-400 mx-auto mb-5" />
-                <h3 className="text-2xl font-bold text-white mb-3">Advisory-First</h3>
-                <p className="text-lg text-slate-300 mb-5">90-min working session this week</p>
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-center space-x-2 text-emerald-400">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm">KPI map & backlog</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-emerald-400">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm">Co-build option</span>
-                  </div>
-                </div>
+        {/* Dashboard Mock - Compact but Visual */}
+        <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/60 backdrop-blur-xl rounded-2xl p-4 lg:p-5 border-2 border-slate-700/50 shadow-2xl shadow-blue-500/10 mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          {/* Dashboard Header - Compact */}
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-700/50">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
+                <BarChart3 className="w-4 h-4 text-cyan-400" />
+              </div>
+              <div>
+                <h3 className="text-base font-bold text-white">Your Command Center</h3>
+                <p className="text-[10px] text-slate-400">Custom Dashboard • Single Pane of Truth</p>
               </div>
             </div>
-              
-            {/* Pilot-First */}
-            <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-              <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all h-full">
-                <Zap className="w-14 h-14 text-blue-400 mx-auto mb-5" />
-                <h3 className="text-2xl font-bold text-white mb-3">Pilot-First</h3>
-                <p className="text-lg text-slate-300 mb-5">Start today with a 30-day PoV</p>
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-center space-x-2 text-blue-400">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm">KPI guarantee</span>
+            <div className="flex items-center gap-1.5">
+              <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="text-[10px] text-emerald-400 font-semibold">Live</span>
+            </div>
+          </div>
+          
+          {/* 6 Widget Grid with Charts/Data */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 mb-4">
+            {/* Widget 1: Active Workflows with mini bar chart */}
+            <div className="bg-slate-800/60 rounded-xl p-3 border border-emerald-500/30">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <Workflow className="w-4 h-4 text-emerald-400" />
+                  <span className="text-white font-semibold text-xs">Active Workflows</span>
+                </div>
+                <Activity className="w-3 h-3 text-emerald-400/50" />
+              </div>
+              <div className="text-2xl font-bold text-emerald-400 mb-2">12</div>
+              <div className="flex items-center gap-0.5 mb-2 h-6">
+                {[80, 65, 90, 75, 95, 85].map((height, i) => (
+                  <div key={i} className="flex-1 bg-emerald-500/30 rounded-sm border border-emerald-500/50" style={{ height: `${height/3.5}px` }} />
+                ))}
+              </div>
+              <div className="text-[10px] text-emerald-400">↑ 23% vs last week</div>
+            </div>
+
+            {/* Widget 2: Agent Status with status indicator */}
+            <div className="bg-slate-800/60 rounded-xl p-3 lg:p-4 border border-purple-500/20">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <Users className="w-4 h-4 text-purple-400" />
+                  <span className="text-white font-semibold text-xs">Agent Status</span>
+                </div>
+                <div className="flex gap-1">
+                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                </div>
+              </div>
+              <div className="text-2xl font-bold text-purple-400 mb-1">3/3</div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <div className="flex-1 h-1 bg-purple-500/20 rounded-full overflow-hidden">
+                    <div className="h-full bg-purple-500 rounded-full" style={{ width: '100%' }} />
                   </div>
-                  <div className="flex items-center justify-center space-x-2 text-blue-400">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm">Upgrade path to Sprint/OS</span>
-                  </div>
+                  <span className="text-[9px] text-slate-500">100%</span>
+                </div>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-1">All systems operational</div>
+            </div>
+
+            {/* Widget 3: Queries Today with trend */}
+            <div className="bg-slate-800/60 rounded-xl p-3 border border-blue-500/30">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <MessageSquare className="w-4 h-4 text-blue-400" />
+                  <span className="text-white font-semibold text-xs">Queries Today</span>
+                </div>
+                <TrendingUp className="w-3 h-3 text-blue-400" />
+              </div>
+              <div className="text-2xl font-bold text-blue-400 mb-2">847</div>
+              <div className="flex items-center gap-0.5 mb-2 h-6">
+                {[12, 18, 15, 22, 28, 35, 42, 38, 45, 52].map((height, i) => (
+                  <div key={i} className="flex-1 bg-blue-500/40 rounded-sm border border-blue-500/60" style={{ height: `${height/2.5}px` }} />
+                ))}
+              </div>
+              <div className="text-[10px] text-blue-400">Peak: 2-4pm (87 q/hr)</div>
+            </div>
+
+            {/* Widget 4: Approvals Queue with list */}
+            <div className="bg-slate-800/60 rounded-xl p-3 border border-orange-500/30">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400" />
+                  <span className="text-white font-semibold text-xs">Approvals</span>
+                </div>
+                <Clock className="w-3 h-3 text-orange-400/50" />
+              </div>
+              <div className="text-2xl font-bold text-orange-400 mb-2">5</div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 text-[9px] text-slate-400">
+                  <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
+                  <span>2 workflow triggers</span>
+                </div>
+                <div className="flex items-center gap-2 text-[9px] text-slate-400">
+                  <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
+                  <span>3 agent actions</span>
                 </div>
               </div>
             </div>
 
-            {/* Ready to go Agentic */}
-            <div className="relative group animate-slide-in-right">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-              <div className="relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all h-full">
-                <Rocket className="w-14 h-14 text-purple-400 mx-auto mb-5" />
-                <h3 className="text-2xl font-bold text-white mb-3">Ready to go Agentic</h3>
-                <p className="text-lg text-slate-300 mb-5">Deploy full OS Foundation</p>
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-center space-x-2 text-purple-400">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm">Complete Agentic OS</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-purple-400">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm">Custom dashboard + all products</span>
-                  </div>
+            {/* Widget 5: KPI Cards with progress */}
+            <div className="bg-slate-800/60 rounded-xl p-3 border border-cyan-500/30">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-cyan-400" />
+                  <span className="text-white font-semibold text-xs">Time Saved</span>
                 </div>
+                <Target className="w-3 h-3 text-cyan-400/50" />
+              </div>
+              <div className="text-2xl font-bold text-cyan-400 mb-2">18 hrs</div>
+              <div className="mb-1">
+                <div className="h-2.5 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full shadow-lg shadow-cyan-500/50" style={{ width: '72%' }} />
+                </div>
+              </div>
+              <div className="text-[10px] text-cyan-400">Goal: 25 hrs/week</div>
+            </div>
+
+            {/* Widget 6: Audit Log with recent activity */}
+            <div className="bg-slate-800/60 rounded-xl p-3 border border-pink-500/30">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <FileCheck className="w-4 h-4 text-pink-400" />
+                  <span className="text-white font-semibold text-xs">Audit Log</span>
+                </div>
+                <Shield className="w-3 h-3 text-pink-400/50" />
+              </div>
+              <div className="text-2xl font-bold text-pink-400 mb-1">1.2k</div>
+              <div className="space-y-0.5">
+                <div className="text-[9px] text-slate-500">• CRM sync completed</div>
+                <div className="text-[9px] text-slate-500">• 3 workflows triggered</div>
+                <div className="text-[9px] text-slate-500">• 2 approvals processed</div>
               </div>
             </div>
           </div>
 
-          {/* Required Decisions */}
-          <div className="animate-fade-in-up w-full" style={{ animationDelay: '0.4s' }}>
-            <div className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-7 border border-slate-700/50">
-              <h4 className="text-xl font-bold text-white mb-5">Confirm These 4 Things:</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-left">
-                <div className="flex items-start space-x-3">
-                  <Target className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0" />
+          {/* Ask, Act, Audit Row - Compact */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-4 border-t border-slate-700/50">
+            <div className="bg-gradient-to-br from-cyan-500/15 to-blue-500/15 rounded-xl p-4 border-2 border-cyan-500/40">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <Search className="w-4 h-4 text-cyan-400" />
+                </div>
+                <span className="text-cyan-300 font-bold text-base">Ask</span>
+              </div>
+              <p className="text-slate-200 text-xs leading-relaxed">
+                Plain-English queries → <span className="text-cyan-400 font-semibold">instant answers</span>
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-emerald-500/15 to-blue-500/15 rounded-xl p-4 border-2 border-emerald-500/40">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-emerald-400" />
+                </div>
+                <span className="text-emerald-300 font-bold text-base">Act</span>
+              </div>
+              <p className="text-slate-200 text-xs leading-relaxed">
+                <span className="text-emerald-400 font-semibold">One-click approvals</span> across your stack
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-500/15 to-pink-500/15 rounded-xl p-4 border-2 border-purple-500/40">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                  <FileCheck className="w-4 h-4 text-purple-400" />
+                </div>
+                <span className="text-purple-300 font-bold text-base">Audit</span>
+              </div>
+              <p className="text-slate-200 text-xs leading-relaxed">
+                <span className="text-purple-400 font-semibold">RBAC</span>, logs, export anytime
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Cost Lever Callout - Compact */}
+        <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-xl p-3 border border-blue-500/30 mb-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <DollarSign className="w-4 h-4 text-blue-400" />
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-0.5">Cost lever</h4>
+              <p className="text-slate-300 text-xs leading-snug">
+                Reduce seat costs by shifting work into your owned dashboard; keep only minimum <span className="text-blue-400 font-semibold">system-of-record</span> licenses.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 rounded-full border border-slate-700/50">
+            <Brain className="w-3 h-3 text-cyan-400" />
+            <span className="text-xs text-slate-300">Powered by <span className="text-cyan-400 font-semibold">SIC</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Slide 12 - 30-Day Launch Plan + Commercials (condensed final slide)
+const Slide12Final: React.FC<SlideProps> = ({ isActive }) => {
+  return (
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        {/* Header */}
+        <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white animate-fade-in-up tracking-tight text-center">
+          Ship value in 7 days. <span className="bg-gradient-to-r from-emerald-400 to-blue-400 text-transparent bg-clip-text">Prove ROI by Day 30.</span>
+        </h2>
+
+        {/* 2-Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          {/* Left: Timeline + Guarantee */}
+          <div className="space-y-5">
+            {/* Timeline */}
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-2xl p-7 border border-slate-700/50">
+              <h4 className="text-white font-bold mb-6 text-center text-xl">30-Day Timeline</h4>
+              <div className="space-y-5">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-6 h-6 text-emerald-400" />
+                  </div>
                   <div>
-                    <p className="text-white font-semibold text-base">KPI</p>
-                    <p className="text-slate-400 text-sm">What success looks like</p>
+                    <p className="text-white text-lg font-semibold">Week 1</p>
+                    <p className="text-sm text-slate-400">Connect + baseline + ship dashboard</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <Network className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Wrench className="w-6 h-6 text-blue-400" />
+                  </div>
                   <div>
-                    <p className="text-white font-semibold text-base">Tools</p>
-                    <p className="text-slate-400 text-sm">What we're connecting to</p>
+                    <p className="text-white text-lg font-semibold">Week 2-3</p>
+                    <p className="text-sm text-slate-400">Ship workflows + iterate</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <Calendar className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-white font-semibold text-base">Start Date</p>
-                    <p className="text-slate-400 text-sm">When we kick off</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FileCheck className="w-6 h-6 text-purple-400" />
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <DollarSign className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-white font-semibold text-base">Payment</p>
-                    <p className="text-slate-400 text-sm">Invoice & terms</p>
+                    <p className="text-white text-lg font-semibold">Week 4</p>
+                    <p className="text-sm text-slate-400">ROI review + expand</p>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Guarantee */}
+            <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-emerald-500/30 text-center">
+              <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto mb-3" />
+              <p className="text-emerald-300 font-semibold text-lg">We fine-tune at no cost until it works</p>
+            </div>
+          </div>
+
+          {/* Right: Pricing */}
+          <div className="bg-slate-900/60 backdrop-blur-xl rounded-2xl p-7 border border-slate-700/50">
+            <h4 className="text-white font-bold mb-6 text-center text-xl">Packaging & Pricing</h4>
+            
+            {/* Core Packages */}
+            <div className="space-y-4 mb-5">
+              <div className="bg-slate-800/50 rounded-xl p-5 border border-emerald-500/30 flex items-center justify-between">
+                <div>
+                  <p className="text-white font-semibold text-lg">Proof-of-Value (PoV) Pilot</p>
+                  <p className="text-sm text-slate-400">30-day validation</p>
+                </div>
+                <p className="text-emerald-400 font-bold text-2xl">$4-8k</p>
+              </div>
+              
+              <div className="bg-slate-800/50 rounded-xl p-5 border border-blue-500/30 flex items-center justify-between">
+                <div>
+                  <p className="text-white font-semibold text-lg">Sprint</p>
+                  <p className="text-sm text-slate-400">Expand workflows + agents</p>
+                </div>
+                <p className="text-blue-400 font-bold text-2xl">$10-18k</p>
+              </div>
+              
+              <div className="bg-slate-800/50 rounded-xl p-5 border border-purple-500/30 flex items-center justify-between">
+                <div>
+                  <p className="text-white font-semibold text-lg">AI OS Foundation</p>
+                  <p className="text-sm text-slate-400">Full Agentic OS</p>
+                </div>
+                <p className="text-purple-400 font-bold text-2xl">$25k+</p>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-5" />
+
+            {/* Additional Services */}
+            <div className="space-y-3 text-base">
+              <div className="flex items-center justify-between text-slate-300">
+                <span>Advising (monthly)</span>
+                <span className="text-cyan-400 font-semibold">min $2,500/mo</span>
+              </div>
+              <div className="flex items-center justify-between text-slate-300">
+                <span>AI Development</span>
+                <span className="text-blue-400 font-semibold">Varies</span>
+              </div>
+              <div className="flex items-center justify-between text-slate-300">
+                <span>SIC Cloud (managed ops)</span>
+                <span className="text-emerald-400 font-semibold">$350–2.5k/mo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Close CTA - Bigger */}
+        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-emerald-500/30 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <h4 className="text-2xl font-bold text-white mb-5 text-center">Pick 1 Workflow → Pick 1 KPI → Pick Start Date</h4>
+          <div className="flex items-center justify-center gap-10 flex-wrap">
+            <div className="flex items-center gap-3">
+              <Target className="w-6 h-6 text-emerald-400" />
+              <span className="text-slate-200 text-lg font-medium">KPI</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Network className="w-6 h-6 text-blue-400" />
+              <span className="text-slate-200 text-lg font-medium">Tools</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Calendar className="w-6 h-6 text-cyan-400" />
+              <span className="text-slate-200 text-lg font-medium">Start Date</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <DollarSign className="w-6 h-6 text-purple-400" />
+              <span className="text-slate-200 text-lg font-medium">Payment</span>
             </div>
           </div>
         </div>
@@ -2303,16 +2506,18 @@ export const MarketingAIOS: React.FC = () => {
   const renderSlide = () => {
     const isActive = true;
     switch (currentSlide) {
-      case 0: return <Slide1 isActive={isActive} slideIndex={currentSlide} />;
-      case 1: return <Slide2 isActive={isActive} slideIndex={currentSlide} />;
-      case 2: return <Slide3 isActive={isActive} slideIndex={currentSlide} />;
-      case 3: return <Slide4 isActive={isActive} slideIndex={currentSlide} />;
-      case 4: return <Slide5 isActive={isActive} slideIndex={currentSlide} />;
-      case 5: return <Slide6 isActive={isActive} slideIndex={currentSlide} />;
-      case 6: return <Slide8 isActive={isActive} slideIndex={currentSlide} />;
-      case 7: return <Slide9 isActive={isActive} slideIndex={currentSlide} />;
-      case 8: return <Slide10 isActive={isActive} slideIndex={currentSlide} />;
-      case 9: return <Slide11 isActive={isActive} slideIndex={currentSlide} />;
+      case 0: return <Slide1 isActive={isActive} slideIndex={currentSlide} />;           // Cover
+      case 1: return <Slide2 isActive={isActive} slideIndex={currentSlide} />;           // The Problem
+      case 2: return <Slide3 isActive={isActive} slideIndex={currentSlide} />;           // Renting Intelligence Costs
+      case 3: return <Slide4 isActive={isActive} slideIndex={currentSlide} />;           // The Solution
+      case 4: return <Slide5 isActive={isActive} slideIndex={currentSlide} />;           // You Own It. We Operate It.
+      case 5: return <Slide6 isActive={isActive} slideIndex={currentSlide} />;           // Why Now
+      case 6: return <Slide7 isActive={isActive} slideIndex={currentSlide} />;           // The Shoofly Method
+      case 7: return <Slide8 isActive={isActive} slideIndex={currentSlide} />;           // What We Build (3 blocks)
+      case 8: return <Slide9Demo isActive={isActive} slideIndex={currentSlide} />;       // Demo Workflow
+      case 9: return <Slide10Proof isActive={isActive} slideIndex={currentSlide} />;     // Proof: Real Results
+      case 10: return <Slide11ControlPlane isActive={isActive} slideIndex={currentSlide} />; // Control Plane Dashboard
+      case 11: return <Slide12Final isActive={isActive} slideIndex={currentSlide} />;    // 30-Day Launch + Pricing
       default: return <Slide1 isActive={isActive} slideIndex={currentSlide} />;
     }
   };
@@ -2411,6 +2616,13 @@ export const MarketingAIOS: React.FC = () => {
     </div>
   );
 };
+
+
+
+
+
+
+
 
 
 
