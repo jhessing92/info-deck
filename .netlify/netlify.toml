@@ -10,7 +10,6 @@ plugins = []
 publish = "/Users/jonathanhessing/Desktop/Cursor Projects/presentation deck/dist"
 publishOrigin = "config"
 commandOrigin = "config"
-base = "/Users/jonathanhessing/Desktop/Cursor Projects/presentation deck"
 command = "npm run build"
 
 [build.environment]

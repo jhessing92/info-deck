@@ -1,651 +1,535 @@
-# CCSD Marketing AI OS™ - Presentation Script
+# ShooflyAI "Own Your AI. ROI in Weeks" - Presentation Script
 
-**Presenter Guide: Complete Walkthrough for All 17 Slides**
+**Presenter Guide: Complete Walkthrough for All 12 Slides**
 
 ---
 
 ## 🎯 **Before You Begin**
 
 **Setup Checklist:**
-- [ ] Open presentation at https://ccsd.shooflyai.com/marketing-ai-os
+- [ ] Open presentation at https://info.shooflyai.com
 - [ ] Test keyboard navigation (Arrow keys)
 - [ ] Ensure full screen mode
 - [ ] Have water nearby
-- [ ] Estimated time: 25-30 minutes
+- [ ] Estimated time: 20-25 minutes
 
 **Presentation Tips:**
-- Pause after each slide for questions
+- Pause after key slides for questions
 - Use keyboard arrows to advance
-- Maintain eye contact with audience
-- Let the visuals breathe—don't rush
+- Let the brain/body diagram sink in
+- Focus on ownership vs. vendor lock-in
+- Remember: This is infrastructure, not chatbots
 
 ---
 
-## **SLIDE 1: One System to Tell More Stories**
+## **SLIDE 1: Own Your AI. ROI in Weeks.**
 
-### **Opening [30 seconds]**
+### **Opening [45 seconds]**
 
 *[Pause as slide loads, let the visuals sink in]*
 
 **Script:**
 
-"Good morning/afternoon everyone. Thank you for being here.
-
-What you're looking at isn't just a technology presentation—it's a fundamental shift in how CCSD tells stories. 
+"Good morning/afternoon. I'm [Your Name] from ShooflyAI.
 
 *[Gesture to screen]*
 
-**One System to Tell More Stories.** That's our mission. That's what we're here to talk about today.
+**'Own your AI. ROI in weeks.'**
 
-Right now, your communications team says 'no' to most school stories—not because they don't care, but because there simply aren't enough hours in the day. 
+That's not marketing speak. That's our promise.
 
-Today, I'm going to show you how we change that—how we empower CCSD to say 'yes' to stories from all 112 schools across the district.
+*[Point to subtitle]*
 
-This is Georgia's first agentic marketing ecosystem. And it's being built specifically for you."
+**'Your AI brain. Your keys. We handle the ops.'**
+
+Here's what that means: We build AI infrastructure that you OWN—your code, your data, your intelligence. But you don't have to operate it. We can run it for you, or hand it off anytime. No vendor lock-in. Ever.
+
+*[Point to footer]*
+
+**Start small → Prove value → Scale forever.**
+
+That's the progression. Let me show you why this matters right now."
 
 *[Advance to next slide]*
 
 ---
 
-## **SLIDE 2: Why Now**
+## **SLIDE 2: The Problem**
 
-### **The Problem Statement [2 minutes]**
+### **AI is Everywhere... and Nowhere [2 minutes]**
 
 **Script:**
 
-"Let me start with something Daniel Vehar said that really stuck with me:
+"Let me show you the problem with how everyone uses AI today.
 
-*[Read quote on screen]*
+*[Point to the brain/body diagram]*
 
-**'Our ROI is time.'**
+Every tool is adding AI. Fireflies has an AI assistant. HubSpot has an AI assistant. QuickBooks, Monday, Slack—they all have these built-in 'brains.'
 
-That's profound. Because for most organizations, ROI means revenue. But for CCSD, ROI means something different—it means getting time back. Time to tell more stories. Time to say yes instead of no.
+Here's the issue: **Each app has a 'brain' (AI assistant) + 'body' (your data).**
+
+*[Point to the isolated brains]*
+
+But those brains can't see across tools. They only know about their own app.
+
+*[Point to callout box]*
+
+Look at this example: **'Ask Fireflies: which deals are closing?'**
+
+It can't answer. Because it can't see your CRM or QuickBooks. Its intelligence is trapped inside the Fireflies app.
 
 *[Pause]*
 
-Here's the reality: Your communications team receives 5 to 10 story requests per day from schools. And right now, most of those requests get ignored—not because they're not important, but because there's simply no bandwidth.
+So you become the integration layer—copying, pasting, reconciling data between systems every day. That's manual glue work.
 
-*[Lean forward]*
+And the result? **Fragmented intelligence + growing vendor lock-in.**
 
-That's what we're solving. We're building an agentic operating system that acts as your team's virtual newsroom—a 24/7 creative partner that handles the heavy lifting so your team can focus on strategy, relationships, and the stories that matter most.
-
-The question isn't 'Can we build this?' The question is: 'Can we afford NOT to?'"
+Your AI capability is trapped inside someone else's product."
 
 *[Advance]*
 
 ---
 
-## **SLIDE 3: Vision - One System, Many Voices**
+## **SLIDE 3: What Renting Intelligence Costs You**
 
-### **The Big Picture [1.5 minutes]**
-
-**Script:**
-
-"So what does this look like in practice?
-
-*[Read quote on screen]*
-
-**'From a central hub, every school can publish, measure, and celebrate their stories.'**
-
-This is the vision. Not a bunch of disconnected tools. Not more spreadsheets. Not another platform to learn.
-
-*[Point to three pillars]*
-
-One unified workspace where everything connects:
-- A **unified workspace** where campaigns live and breathe
-- A **shared knowledge base** that learns your voice and never forgets it
-- **Connected dashboards** that show you what's working in real-time
-
-It's one system, but it amplifies many voices—112 voices, to be exact. Every school. Every story. All connected."
-
-*[Advance]*
-
----
-
-## **SLIDE 4: Pain to Possibility**
-
-### **Contrast the Reality [2 minutes]**
+### **You Can Export Data... But Not Intelligence [2 minutes]**
 
 **Script:**
 
-"Let's talk about where you are today versus where you could be.
+"Now let me explain why this vendor lock-in is so dangerous.
 
-*[Point to 'Before' column]*
+*[Point to split-screen visual]*
 
-**Before:** This is the current reality for most communications teams—and I'm guessing it feels familiar:
+**You can export data… but you can't export intelligence.**
 
-- Manual writing and ideation for every single piece
-- 5 to 10 school requests coming in daily that get ignored
-- Half-day campaign briefs that take a director away from strategy
-- Fragmented systems—ClickUp for tasks, Sprout for social, Brand24 for monitoring—none of them talking to each other
+Look at this:
 
-*[Pause, let it sink in]*
+*[Point to left side - Export Data ✓]*
 
-Now look at the other side.
+Vendors let you export records. CSV downloads, API data access, record backups—all good.
 
-*[Point to 'After' column]*
+*[Point to right side - Export Intelligence ✗]*
 
-**After:** This is what becomes possible:
+But you CAN'T export:
+- AI memory & context
+- Trained playbooks  
+- Custom workflows
 
-- AI-driven ideation and brief generation—ideas at the speed of conversation
-- Agent-run reporting and sentiment alerts—you wake up to insights, not data
-- First-draft automation—your writers become editors, not content factories
-- And here's the key: **One chat to orchestrate it all**
+*[Point to 'Memory is the moat' callout]*
 
-You go from saying 'no' to saying 'yes.' From reactive to proactive. From overwhelmed to in control."
+**Memory is the moat.** That's their competitive advantage. They trap your intelligence so you can't leave.
 
-*[Advance]*
+Switching models means rebuilding context from scratch. All that learning? Gone.
 
----
-
-## **SLIDE 5: Chat-Driven OS Interface**
-
-### **The Revolutionary UX [2.5 minutes]**
-
-**Script:**
-
-"Now I want to show you something that's going to change how you think about AI.
-
-*[Point to chat interface]*
-
-This is the Chat OS. Every agent, every capability, every insight—accessible through one conversation.
-
-*[Wait for animation to play]*
-
-Watch what happens when someone types: **'Draft a campaign brief for Virtual Academy.'**
-
-*[Let AI response appear]*
-
-Look at that. In seconds, the system generates:
-- A complete campaign structure
-- Clear objectives
-- A three-week timeline
-- A tone check to ensure it's on-brand
-- And it syncs automatically to ClickUp
+Your 'AI capability' becomes trapped inside someone else's product.
 
 *[Pause]*
 
-This isn't a chatbot that answers questions. This is a **conversational operating system** that does work.
-
-You don't need to learn new interfaces. You don't need to click through five screens. You just ask—naturally, like you would a colleague—and it delivers.
-
-*[Point to benefits on right]*
-
-- **Natural conversation** - Talk to your OS like a team member
-- **Instant action** - From idea to structured brief in seconds
-- **Always on brand** - Built-in tone and policy compliance
-
-This is what makes our system different. It's not about replacing humans—it's about giving humans superpowers."
+That's why ownership matters. When you rent, you're trapped. When you own, you're free."
 
 *[Advance]*
 
 ---
 
-## **SLIDE 6: Your Agentic Team**
+## **SLIDE 4: The Solution in One Sentence**
 
-### **The Six Agents [3 minutes]**
-
-**Script:**
-
-"So let's meet your team. These are the six intelligent agents that power the OS—and more importantly, what they free your human team to do.
-
-*[Point to each card as you discuss]*
-
-**1. Campaign Planner**
-- Generates full briefs and timelines
-- **Human lens:** Frees directors to focus on strategy instead of paperwork
-
-**2. Social Media Manager**
-- Monitors sentiment and performance across all platforms
-- **Human lens:** Keeps your pulse on all 112 communities—something no human could do manually
-
-**3. Blog Builder**
-- Writes first drafts and optimizes for SEO
-- **Human lens:** Your writers become editors—they refine instead of create from scratch
-
-**4. Accreditation + Analytics**
-- Monitors reputation and policy compliance 24/7
-- **Human lens:** Protects your district's narrative before issues become crises
-
-**5. Dashboard**
-- Tracks ROI and engagement in real-time
-- **Human lens:** Delivers clarity to leadership—no more scrambling for reports
-
-**6. Knowledge Base**
-- Stores tone, brand guidelines, and templates
-- **Human lens:** Learns CCSD's voice over time—institutional knowledge that never walks out the door
-
-*[Pause]*
-
-These aren't just tools. They're team members. And they work 24/7 so your human team can focus on what they do best: building relationships, making strategic decisions, and telling the stories that matter."
-
-*[Advance]*
-
----
-
-## **SLIDE 7: The Chat OS Experience**
-
-### **See It In Action [2 minutes]**
+### **Own the Brain That Connects All Your Tools [2 minutes]**
 
 **Script:**
 
-"Let me show you what this looks like in a real workflow.
-
-*[Point to conversation]*
-
-Here's a comms lead talking to the Marketing OS just like they would talk to a colleague:
-
-**Comms Lead asks:** 'Show me sentiment trends for our recent equity campaign.'
-
-*[Point to AI response]*
-
-**The OS responds** with a complete analysis:
-- 82% positive engagement
-- Top performer: Harrison High School  
-- And here's the key: it makes a recommendation—'Amplify student voice content'
-
-Then the comms lead says: **'Create a follow-up campaign brief.'**
-
-And the OS does it. Instantly.
-
-*[Point to 'Ask it anything' examples]*
-
-This is what I mean by conversational power:
-- 'Summarize today's social sentiment'
-- 'Show top 5 schools by engagement'
-- 'Draft tomorrow's Breast Cancer Awareness post'
-
-You're not navigating menus. You're not clicking buttons. You're just talking—and the system responds with intelligence."
-
-*[Advance]*
-
----
-
-## **SLIDE 8: Agent Workflows**
-
-### **The Efficiency Gains [1.5 minutes]**
-
-**Script:**
-
-"Let's talk about what these agents actually accomplish in your workflow.
-
-*[Point to each workflow card]*
-
-**Campaign Planner:** 75% time savings on campaign setup
-- What used to take 4 hours now takes 1
-
-**Social Manager:** Real-time sentiment monitoring plus post QA
-- You're not just publishing—you're publishing smart
-
-**Content Ideation:** Turns one blog into five social assets
-- Maximum reach from minimum effort
-
-**Reporting:** Auto-generates weekly executive reports
-- No more Sunday nights building PowerPoints
-
-*[Point to workflow wheel]*
-
-And here's the beautiful part: The workflow becomes **Edit, Approve, Publish.**
-
-You're not writing from scratch. You're not researching for hours. You're reviewing, refining, and releasing. That's the new workflow."
-
-*[Advance]*
-
----
-
-## **SLIDE 9: ROI Snapshot**
-
-### **The Numbers [2.5 minutes]**
-
-**Script:**
-
-"Now let's talk about ROI. And remember—for CCSD, ROI isn't measured in dollars. It's measured in time and stories.
-
-*[Point to each metric row]*
-
-Let me break this down:
-
-**Campaign setup:**
-- Current: 4 hours per campaign
-- With AI OS: 1 hour
-- **Impact: 75% time saved**
-
-**Writing:**
-- Current: 1 hour per piece
-- With AI OS: 30 minutes (you're editing, not creating)
-- **Impact: 25-30% time saved**
-
-**Ideation research:**
-- Current: 3 hours per day digging for story ideas
-- With AI OS: 1 hour reviewing AI-generated ideas
-- **Impact: 65% time saved**
-
-**And here's the big one—Stories published:**
-- Current: 10 stories per day (maybe)
-- With AI OS: **112 stories per week potential**
-- **Impact: 10× capacity increase**
-
-*[Let that sink in]*
-
-That's not 10% more. Not 50% more. That's **TEN TIMES** more stories. That's every school getting a story every week.
-
-*[Point to payback metric]*
-
-**Directional payback: About 4.5 months.**
-
-Now, these figures depend on adoption and data quality—but even at half this efficiency, the ROI is undeniable."
-
-*[Advance]*
-
----
-
-## **SLIDE 10: Knowledge + Memory Layer**
-
-### **Owning Your Intelligence [2 minutes]**
-
-**Script:**
-
-"Now I want to talk about something critically important: **data ownership.**
-
-*[Read quote on screen]*
-
-**'Owning your intelligence means never losing your voice.'**
-
-Here's what that means:
-
-Every campaign you run, every brief you create, every edit you make—it's training a private model. YOUR model. Not OpenAI's. Not Google's. Yours.
-
-*[Point to neural network visual]*
-
-This is your institutional knowledge visualized:
-- Your **voice**
-- Your **tone**
-- Your **templates**
-- Your **brand guidelines**
-
-*[Pause]*
-
-You know what happens at most organizations when a senior communications person leaves? They take a decade of knowledge with them. Stories that worked. Language that resonated. Relationships that mattered.
-
-Not anymore.
-
-*[Point to features]*
-
-With this system:
-- Every campaign makes the system smarter
-- Pattern recognition improves over time
-- Optional GetPoppy API integration for personalized writing memory
-- You never lose institutional knowledge when team members change
-
-This is your intelligence. You own it. You control it. And it grows with you."
-
-*[Advance]*
-
----
-
-## **SLIDE 11: Marketing Performance Dashboard**
-
-### **Intelligence at Your Fingertips [1.5 minutes]**
-
-**Script:**
-
-"So how do you actually see what's working?
-
-*[Point to dashboard metrics]*
-
-This isn't just a dashboard—it's a conversational analytics advisor.
-
-Look at these metrics updating in real-time:
-- **Engagement Rate:** 8.4% (up 24%)
-- **Campaign Reach:** 2.1 million (up 37%)
-- **Stories Published:** 112 per week (up 900%)
-
-*[Point to chat example]*
-
-But here's what makes it special—you can just ask:
-
-**'Show sentiment trends for Harrison High last 30 days.'**
-
-And it shows you. No clicking through filters. No building custom reports. Just ask.
-
-This pulls data from Sprout Social, Brand24, ClickUp—all your systems—and makes it conversational.
-
-Leadership wants to know what's working? You can tell them. Right now. With confidence."
-
-*[Advance]*
-
----
-
-## **SLIDE 12: School-Level Story Expansion**
-
-### **The 112 Goal [2 minutes]**
-
-**Script:**
-
-"Now we get to the heart of why we're doing this.
-
-*[Point to strategic goal]*
-
-**'One story per school per week.'**
-
-That's the goal. 112 schools. 112 stories. Every single week.
-
-Right now, that's impossible. Literally impossible. There aren't enough hours, enough people, enough resources.
-
-*[Point to map visualization]*
-
-But watch what happens with AI-enabled micro-storytelling.
-
-*[Let animation play - schools lighting up]*
-
-Every dot you see is a school getting its story told. Every light is a principal who no longer has to feel invisible. Every pulse is a community being celebrated.
-
-*[Point to impact metric]*
-
-**500% increase in storytelling capacity.**
-
-Not 50%. Not 100%. **Five hundred percent.**
-
-That's the difference between saying 'no' and saying 'yes.' Between featuring the same 10 schools and celebrating all 112."
-
-*[Advance]*
-
----
-
-## **SLIDE 13: Implementation Timeline**
-
-### **How We Get There [2 minutes]**
-
-**Script:**
-
-"So how do we actually build this? Let me walk you through the 10-week timeline.
-
-*[Point to each phase]*
-
-**Weeks 1-2: Discovery + Integrations**
-- We connect to your APIs—ClickUp, Sprout, Brand24
-- Map your existing workflows
-- Run team workshops to understand your needs
-
-**Weeks 3-5: Agent Builds**
-- Build the Campaign Planner
-- Deploy the Social Media Manager
-- Get core agents operational
-
-**Weeks 6-7: Blog + Accreditation**
-- Set up the content pipeline
-- Integrate Brand24 for sentiment monitoring
-- Configure compliance alerts
-
-**Weeks 8-9: Dashboard + QA**
-- Build the performance dashboard
-- Testing and refinement
-- **Deploy the Chat OS layer**—this is where it all comes together
-
-**Week 10: Launch + GSPRA**
-- Team training sessions
-- Go-live support
-- GSPRA showcase preparation
-
-*[Pause]*
-
-Ten weeks from kickoff to launch. And we're with you every step of the way."
-
-*[Advance]*
-
----
-
-## **SLIDE 14: Investment & ROI**
-
-### **The Financial Case [2.5 minutes]**
-
-**Script:**
-
-"Let's talk about investment. I know this is what everyone wants to know.
-
-*[Point to investment column]*
-
-**One-time build: $25,000 to $35,000**
-- This covers the complete system build, all integrations, training, everything
-
-**Monthly operating: About $400**
-- This is API costs and maintenance—that's it
-
-*[Point to ROI column]*
-
-Now here's what you get back:
-
-**First Year ROI: 400 to 500%**
-
-Let me break that down:
-- **Labor value saved: About $79,000 per year**
-- **Payback period: 4.5 months**
-
-*[Read narrative framing]*
-
-But remember what Daniel said: **'Measured not in revenue, but in stories told per dollar.'**
-
-*[Pause, make eye contact]*
-
-Think about it this way: For the cost of one mid-level hire, you're getting the equivalent of a team of six specialists working 24/7. 
-
-And unlike a hire, they never get sick, never take vacation, never leave for another job.
-
-Plus, you're not just buying software—you're buying capacity. The capacity to say yes. The capacity to tell 10 times more stories. The capacity to give every school in your district a voice."
-
-*[Advance]*
-
----
-
-## **SLIDE 15: Success Metrics**
-
-### **How We Measure Success [1.5 minutes]**
-
-**Script:**
-
-"So how do we know if this is working? Let me show you the four key metrics we'll be tracking.
-
-*[Point to each metric]*
-
-**Story Output:**
-- Goal: Schools covered weekly
-- Target: All 112 schools
-- This is the north star metric
-
-**Campaign Setup:**
-- Goal: Time reduction
-- Target: 75% faster
-- From hours to minutes
-
-**Reporting:**
-- Goal: Manual hours saved
-- Target: 80% reduction
-- No more weekend report building
-
-**Sentiment Visibility:**
-- Goal: Channels monitored
-- Target: 100% coverage
-- Nothing falls through the cracks
-
-These aren't aspirational. These are achievable targets based on proven AI capabilities and your team's commitment."
-
-*[Advance]*
-
----
-
-## **SLIDE 16: Strategic Impact**
-
-### **The Bigger Picture [2 minutes]**
-
-**Script:**
-
-"Let me zoom out for a moment and talk about what this really means.
+"So here's our solution in one sentence:
 
 *[Read headline]*
 
-**'CCSD sets a new standard for educational storytelling.'**
+**Own the brain that connects all your tools.**
 
-This isn't just about CCSD. This is about leadership.
+*[Point to SIC badge]*
 
-*[Point to each impact statement]*
+This is **Shoofly Intelligence Cloud (SIC)**—your owned, managed AI brain.
 
-- You'll be the **first district in Georgia** with an agentic marketing OS
-- Your **time ROI converts into communication reach**—more stories, more visibility, more pride
-- You'll be **media-ready for GSPRA and national coverage**
+*[Point to three bullet points]*
+
+Here's what it does:
+
+1. **Connects your apps + databases + workflows** into one intelligence layer
+2. **Swap models without losing your playbooks**—use GPT, Claude, Gemini, whatever you want
+3. **Feed everything into a custom dashboard**—your single pane of truth
+
+*[Point to diagram at bottom]*
+
+Look at this visual: Tools on the left, SIC in the middle, dashboard on the right.
+
+Everything flows through your owned brain. Nothing is trapped. Nothing is siloed.
 
 *[Pause]*
 
-Think about the story you'll tell at GSPRA:
-
-'We were drowning in requests and saying no to 90% of our schools. Then we built an AI operating system that let us say yes. Now every school gets a story every week. Here's how we did it.'
-
-*[Point to impact stats]*
-
-- **112 schools connected**
-- **10× capacity increase**
-- **4.5-month payback**
-
-That's not an incremental improvement. That's transformation. And you get to lead it."
+This is how you break free from vendor lock-in while gaining intelligence across your entire organization."
 
 *[Advance]*
 
 ---
 
-## **SLIDE 17: The Future OS - Closing**
+## **SLIDE 5: You Own It. We Operate It.**
 
-### **The Close [2 minutes]**
+### **Ownership Without the Operational Burden [2.5 minutes]**
 
 **Script:**
 
-*[Let the chat bubble animation play]*
+"Now I know what you're thinking: 'Owning sounds great, but I don't want to manage APIs and infrastructure.'
 
-*[Read the AI message]*
+That's exactly why we operate it for you.
 
-**'Hi, I'm your CCSD Marketing OS. What should we create today?'**
+*[Point to two-column layout]*
 
-*[Pause, smile]*
+**Left side—You Own:**
+- Code & workflows
+- Dashboard schema & widgets
+- Intelligence artifacts & playbooks
+- Your data—always
 
-That's the question your team will be asking tomorrow—not 'What can we say no to?' but 'What should we create today?'
+**Right side—We Operate:**
+- Integrations & API changes
+- Security + access controls
+- Uptime & monitoring
+- Governance & auditability
 
-*[Point to prepared by section]*
+*[Point to Fireflies example callout]*
 
-We're ShooflyAI. We build applied AI infrastructure for public institutions. 
+Here's a real example: When Fireflies deprecated their V1 API and migrated to V2, we handled the entire migration. **Your workflows never broke.** This is why managed operations matter.
 
-We've already proven this works with CCSD:
-- Calls with Santa: 100K impressions, 62% open rate
-- Social Media Scraper: 112 schools monitored
+*[Point to handoff badge]*
 
-We know your district. We know your challenges. And we know how to solve them.
+And here's the key: **Handoff-ready.**
 
-*[Final call to action]*
+If you get acquired, we package everything up and hand it off. If you want to switch vendors, take it all with you. If you want to bring it in-house, we train your team.
 
-**Ready to tell more stories?**
+*[Pause]*
 
-*[Pause, make eye contact with key decision makers]*
+You own the restaurant; we run the kitchen. Replace us anytime and keep everything."
 
-Let's talk about next steps. I'm ready to answer your questions, discuss customizations, and map out what implementation looks like specifically for CCSD.
+*[Advance]*
 
-Thank you."
+---
+
+## **SLIDE 6: Why Now**
+
+### **AI Is Unbundling SaaS [2 minutes]**
+
+**Script:**
+
+"Let me tell you why this is the perfect moment to own your AI infrastructure.
+
+*[Read headline]*
+
+**What eCommerce did to malls, AI is doing to SaaS.**
+
+*[Point to three cards]*
+
+Here's what changed:
+
+**1. Development is dramatically cheaper and faster now**
+- What took months now takes hours
+- Internal tools can be built quickly
+
+**2. You can finally 'own the stack'**
+- Instead of renting it from vendors
+- Custom solutions are now accessible
+
+*[Point to visual: SaaS bundle → modular components]*
+
+The old way: Pay for bundled SaaS with features you don't use.
+
+The new way: Build exactly what you need. Own it. Control it.
+
+*[Pause]*
+
+This is why now is the time. The technology is affordable. The tools are accessible. And ownership is finally within reach."
+
+*[Advance]*
+
+---
+
+## **SLIDE 7: The Shoofly Method**
+
+### **The 3-Phase Path to an Agentic OS [3 minutes]**
+
+**Script:**
+
+"So how do we actually build AI that ships? Let me walk you through our 3-phase method.
+
+*[Point to three cards]*
+
+**Phase 1: Business Strategy**
+
+This is where 95% of AI pilots fail—they skip this step. We don't.
+
+- Pick KPI(s) to optimize
+- Establish baseline metrics
+- Define success criteria
+
+If you don't have anything to measure against, you don't have a business strategy—you have a science experiment.
+
+**Phase 2: Data & Systems**
+
+Now we understand where your data lives:
+
+- Map existing tools
+- Connect sources of truth
+- Set up access controls
+
+This is where we might build automations to get your systems talking to each other.
+
+**Phase 3: Agentic OS**
+
+Finally, we enable AI capabilities:
+
+- Deploy Automations (when X happens → Y happens)
+- Add Assistants (ask & act in natural language)
+- Launch Agents (always-on workers with memory + permissions)
+
+*[Point to footer]*
+
+**All visible in your Custom Dashboard.**
+
+*[Pause]*
+
+This isn't theory. This is our proven method. Business strategy first. Data second. AI third."
+
+*[Advance]*
+
+---
+
+## **SLIDE 8: Demo - A Wedge Workflow**
+
+### **Prove Value Fast [2 minutes]**
+
+**Script:**
+
+"Let me show you a real workflow that proves value fast—this is how we start.
+
+*[Point to flow diagram]*
+
+**Trigger:** Meeting ends / doc received / form submitted
+
+**AI Extracts:** Decisions + action items + owners
+
+**One-Click:** Send to CRM / Monday / Slack
+
+**Audit Log:** Log everything for traceability
+
+*[Point to example callout]*
+
+Here's a concrete example:
+
+**Fireflies transcript** → AI extracts action items → **One-click to Monday** with owners & due dates → **Logged for audit**
+
+*[Pause]*
+
+This workflow alone can save you hours every week. And it's just one example.
+
+We start here—with one workflow that moves a needle. Prove value. Then expand."
+
+*[Advance]*
+
+---
+
+## **SLIDE 9: What We Build**
+
+### **Three Building Blocks. One Operating System. [2.5 minutes]**
+
+**Script:**
+
+"Now that you've seen how we start with one workflow, let me show you the full suite of what we build.
+
+*[Point to three cards]*
+
+**Three building blocks:**
+
+**1. Automations**
+- 'When X happens → Y happens' across tools
+- Doc chase & status sync
+- Nightly reconciliation
+- Smart routing & triggers
+
+**2. Assistants**
+- 'Ask + Act' in natural language on your data
+- 'Show Q4 performance' → done
+- 'Draft campaign brief' → done
+- Zero learning curve
+
+**3. AI Agents**
+- Always-on workers with memory + permissions
+- Watch for events & recall context
+- Take approved actions
+- Follow SOPs, escalate when needed
+
+*[Point to footer with icons]*
+
+**All connected through SIC** (your owned brain) → **surfaced in your Custom Dashboard** (your single pane of truth).
+
+*[Pause]*
+
+This isn't one tool. It's a complete operating system. And you can start with just one workflow—like we just showed—and expand from there."
+
+*[Advance]*
+
+---
+
+## **SLIDE 10: Proof Across Industries**
+
+### **Real Results (ROI in Weeks) [3 minutes]**
+
+**Script:**
+
+"Now let me show you who's already using this and what they're achieving.
+
+*[Point to three cards and read through them]*
+
+**K-12 Social Scoring:**
+- Problem: Manual quarterly audit (80 hours)
+- Build: Automated crawl + scoring
+- Result: **80 hrs → ~2.5 hrs + human review**
+- 18 hours saved this week
+
+*[Point to testimonial]*
+
+*[Read Dan Vehar testimonial]*
+
+**CPA Firm Operations:**
+- Problem: Owner bottleneck (calls/email)
+- Build: DocuSign auto-updates + nightly CRM ↔ QuickBooks reconciliation
+- Result: Smart routing + data sync
+- 6 hours saved this week
+
+*[Point to testimonial]*
+
+*[Read Kendyl Strickland testimonial]*
+
+**Content Engine:**
+- Problem: Manual research to publish
+- Build: Automated pipeline
+- Result: **730% ROI in 4 months**
+- 22 hours saved this week
+
+*[Point to testimonial]*
+
+*[Read Chris Lowe testimonial]*
+
+*[Pause]*
+
+Three different industries. Three different use cases. All seeing ROI in weeks, not years.
+
+These aren't hypotheticals. These are real results from real teams."
+
+*[Advance]*
+
+---
+
+## **SLIDE 11: The Control Plane**
+
+### **Your Custom Dashboard [2.5 minutes]**
+
+**Script:**
+
+"Let me show you what your custom dashboard actually looks like.
+
+*[Point to dashboard header]*
+
+**Your Command Center.** Custom Dashboard. Single Pane of Truth. Live.
+
+*[Point to 6 widgets]*
+
+Look at these six widgets showing real-time data:
+
+1. **Active Workflows:** 12 running now (↑ 23% vs last week)
+2. **Agent Status:** 3/3 operational (all systems green)
+3. **Queries Today:** 847 questions answered (peak 2-4pm)
+4. **Approvals Queue:** 5 pending review
+5. **Time Saved (KPI):** 18 hrs this week (goal: 25 hrs/week)
+6. **Audit Log:** 1.2k actions logged
+
+*[Point to Ask, Act, Audit row]*
+
+And here are your three core capabilities:
+
+**Ask:** Plain-English queries over connected systems → instant answers
+
+**Act:** One-click approvals and actions across your entire stack
+
+**Audit:** Role-based access, full logs, export anytime
+
+*[Point to cost lever callout]*
+
+Here's an important benefit: **Reduce seat costs** by shifting daily work into your owned dashboard. Keep only the minimum system-of-record licenses.
+
+*[Point to footer]*
+
+All powered by Shoofly Intelligence Cloud.
+
+*[Pause]*
+
+This dashboard isn't optional. It's included with every OS Foundation. It's your window into everything."
+
+*[Advance]*
+
+---
+
+## **SLIDE 12: 30-Day Launch + Pricing**
+
+### **The Timeline and Investment [3 minutes]**
+
+**Script:**
+
+"Now let's talk about how we deliver this and what it costs.
+
+*[Point to headline]*
+
+**Ship value in 7 days. Prove ROI by Day 30.**
+
+*[Point to timeline on left]*
+
+**Week 1:**
+- Connect tools + baseline + ship dashboard
+
+**Week 2-3:**
+- Ship first workflows + iterate
+
+**Week 4:**
+- ROI review + expansion plan
+
+*[Point to guarantee]*
+
+And here's our guarantee: **We fine-tune at no cost until it works.**
+
+*[Point to pricing on right]*
+
+**Packaging & Pricing:**
+
+**Core Packages:**
+- **Proof-of-Value (PoV) Pilot:** $4-8k (30-day validation)
+- **Sprint:** $10-18k (Expand workflows + agents)
+- **AI OS Foundation:** $25k+ (Full Agentic OS)
+
+**Additional Services:**
+- **Advising (monthly):** min $2,500/mo
+- **AI Development:** Varies (custom builds)
+- **SIC Cloud (managed ops):** $350–2.5k/mo depending on scope
+
+*[Point to CTA at bottom]*
+
+**Pick 1 Workflow → Pick 1 KPI → Pick Start Date**
+
+We need to confirm four things:
+- **KPI:** What does success look like?
+- **Tools:** What are we connecting?
+- **Start Date:** When do we kick off?
+- **Payment:** Invoice & terms
+
+*[Pause, make eye contact]*
+
+So here's my question: Which path makes sense for you? Are you ready to prove value with a pilot, or ready to go all-in with the full OS?
+
+*[Wait for response, engage in conversation]*"
 
 *[End of presentation - open for Q&A]*
 
@@ -655,23 +539,29 @@ Thank you."
 
 ### **Anticipated Questions & Suggested Answers:**
 
+**Q: "How is this different from ChatGPT or Claude?"**
+**A:** "Three key differences: 1) You own it—your data, your models, your infrastructure. 2) It integrates with YOUR tools—not just chat, but your CRM, your project management, your databases. 3) It's built for work—not conversation, but actual workflow automation."
+
 **Q: "What if the AI makes a mistake?"**
-**A:** "Great question. The system is designed with humans in the loop. AI generates first drafts and ideas—your team reviews, refines, and approves before anything goes public. Think of it as a very smart intern who needs supervision."
+**A:** "We build with humans in the loop. AI generates first drafts, automations require approval, and agents escalate when uncertain. Plus we use 99% confidence filtering and automatic fallback models."
 
-**Q: "How do we train staff on this?"**
-**A:** "Training is included in the build fee. We run hands-on workshops during Weeks 1-2 and again at launch. Plus, the chat interface is intuitive—if you can text, you can use this system."
+**Q: "Can we start with just one workflow?"**
+**A:** "Absolutely. That's exactly what our PoV Pilot is designed for. Start with one workflow. Prove value in 30 days. Then expand."
 
-**Q: "What about data privacy and security?"**
-**A:** "All data stays within your controlled environment. We're not training public models with your content. Your stories, your tone, your knowledge—it's all private and owned by CCSD."
+**Q: "What happens after 30 days?"**
+**A:** "You have three options: 1) Upgrade to Sprint for more workflows. 2) Go all-in with OS Foundation. 3) Take what we've built and run it yourself. We hand it over. No strings attached."
 
-**Q: "Can we start with just one or two agents?"**
-**A:** "We recommend the full ecosystem because the agents work together—but yes, we can phase implementation if budget is a concern. The Campaign Planner and Social Manager deliver immediate value."
+**Q: "What if we want to switch vendors later?"**
+**A:** "You own everything. Code, artifacts, dashboard schema, workflows. Switch vendors anytime. Take it all with you. We're not a vendor lock-in company. We're an ownership company."
 
-**Q: "What happens after the 10-week implementation?"**
-**A:** "You'll have a fully operational system. The monthly $400 covers API costs and basic maintenance. We're also available for enhancements, new features, and quarterly strategy reviews."
+**Q: "What about security and compliance?"**
+**A:** "SOC 2 aligned. RBAC and SSO. Encrypted data. Full audit logs. Enterprise-grade security from day one."
 
-**Q: "How is this different from just using ChatGPT?"**
-**A:** "Three key differences: 1) It's trained on YOUR voice and brand, 2) It integrates with YOUR tools (ClickUp, Sprout, etc.), and 3) It's designed specifically for school district communications, not general-purpose chat."
+**Q: "How does the Fireflies example work exactly?"**
+**A:** "Great question—let me explain. Fireflies transcribes your meetings. We can build an automation that takes those transcripts, extracts action items with AI, and sends them to your project management tool like Monday with one click. It saves hours of manual note-taking every week."
+
+**Q: "What's the difference between Automations, Assistants, and Agents?"**
+**A:** "Automations are 'if-this-then-that' workflows (when X happens, do Y). Assistants let you ask questions and take actions in natural language. Agents are always-on workers with memory who follow SOPs and escalate when needed. They all work together."
 
 ---
 
@@ -679,25 +569,96 @@ Thank you."
 
 **Throughout the presentation, reinforce these themes:**
 
-1. **"Our ROI is time"** - This is about capacity, not cost savings
-2. **"Edit, don't write"** - Shift from creation to curation
-3. **"Say yes, not no"** - Transform the relationship with schools
-4. **"One story per school per week"** - The 112 goal
-5. **"First in Georgia"** - Leadership opportunity
-6. **"Own your intelligence"** - Data ownership matters
+1. **"Own your AI"** — This is about ownership, not renting
+2. **"ROI in weeks"** — Not years, weeks
+3. **"Your keys"** — You control everything
+4. **"We handle the ops"** — Ownership without operational burden
+5. **"No vendor lock-in"** — Ever
+6. **"Brain and body"** — Use this metaphor to explain siloed AI
+7. **"Memory is the moat"** — Why vendors trap you
+8. **"Start small → Prove value → Scale forever"** — Clear progression
 
 ---
 
-## ✅ **Post-Presentation Checklist**
+## 🎬 **Slide-by-Slide Quick Reference**
 
-After presenting:
-- [ ] Collect business cards / contact info
-- [ ] Schedule follow-up meeting
-- [ ] Send presentation link
-- [ ] Share this script document
-- [ ] Provide case study examples
-- [ ] Offer to run a pilot with 1-2 schools
+1. **Own Your AI. ROI in Weeks** - Opening hook
+2. **The Problem** - Brain/body diagram, siloed AI
+3. **Renting Intelligence Costs You** - Export data ≠ export intelligence
+4. **The Solution** - SIC connects everything
+5. **You Own It. We Operate It.** - Ownership model explained
+6. **Why Now** - AI unbundling SaaS
+7. **The Shoofly Method** - 3-phase path (Strategy → Data → AI)
+8. **Demo Workflow** - Fireflies → Monday example (strategic wedge)
+9. **What We Build** - Automations, Assistants, Agents (full suite)
+10. **Proof: Real Results** - K-12, CPA, Content Engine + testimonials
+11. **The Control Plane** - Dashboard with Ask, Act, Audit
+12. **30-Day Launch + Pricing** - Timeline, guarantee, packages
 
 ---
 
-**Good luck with your presentation! You're not just selling software—you're offering transformation.** 🚀
+## ✅ **Closing Checklist**
+
+**Before ending the call:**
+
+- [ ] Confirm their interest level (exploring vs. ready to start)
+- [ ] Lock in KPI (what success looks like)
+- [ ] Confirm tools to connect
+- [ ] Discuss start date
+- [ ] Talk payment terms
+- [ ] Send follow-up email with:
+  - Presentation deck link (https://info.shooflyai.com)
+  - Case study links
+  - Next steps
+  - Contract/invoice if ready
+
+---
+
+## 🚀 **Post-Presentation Follow-Up**
+
+**Within 24 hours:**
+
+1. **Send confirmation email** with:
+   - Summary of conversation
+   - Confirmed next steps
+   - Presentation link
+   - Case studies:
+     - K-12: https://shooflyai.com/cobbcounty
+     - CPA: https://shooflyai.com/data-reconciliation-case-study
+     - Law Firm: https://shooflyai.com/lowelaw
+
+2. **Schedule kickoff call** if they've committed
+
+3. **Answer any outstanding questions**
+
+---
+
+## 💡 **Pro Tips**
+
+**During the Presentation:**
+
+- **Use the brain/body metaphor consistently** — It helps people understand why siloed AI doesn't work
+- **Pause after Slide 3** — Let the "memory is the moat" concept sink in
+- **Tell the Fireflies story on Slide 9** — Concrete examples land better than abstract concepts
+- **Point to live demos on Slide 10** — Offer to click through if they want to see more
+- **Address cost concerns proactively** — Talk about seat reduction and time saved, not just sticker price
+
+**Handling Objections:**
+
+- **"We already have AI tools"** → "Perfect. We connect to those tools. We're not replacing them—we're orchestrating them."
+- **"We're not ready"** → "That's why we start with one workflow. Prove value in 30 days. Then decide."
+- **"It's too expensive"** → "Let's talk about time saved. What's your team's hourly rate? How many hours do you spend on manual workflows weekly?"
+- **"We've been burned by vendors"** → "That's exactly why we built ownership into our model. You own everything. No lock-in. Ever."
+
+**Closing Techniques:**
+
+- **Assumptive close**: "So we're looking at starting Week 1, right?"
+- **Alternative close**: "Are you leaning toward a PoV Pilot or ready for the full OS?"
+- **Urgency close**: "We have capacity for two more 30-day PoVs this month. Should we lock in your spot?"
+- **Summary close**: "So just to confirm: KPI is [X], we're connecting [Y], and we start [Date]. Sound right?"
+
+---
+
+**Remember: You're not selling software. You're offering ownership, freedom, and ROI in weeks.**
+
+**Good luck! You've got this.** 🚀

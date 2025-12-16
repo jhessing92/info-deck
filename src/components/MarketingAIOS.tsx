@@ -49,8 +49,8 @@ const slides = [
   { id: 5, title: "You Own It. We Operate It." },
   { id: 6, title: "Why Now" },
   { id: 7, title: "The Shoofly Method" },
-  { id: 8, title: "What We Build" },
-  { id: 9, title: "Demo: Workflow" },
+  { id: 8, title: "Demo: Workflow" },
+  { id: 9, title: "What We Build" },
   { id: 10, title: "Proof: Real Results" },
   { id: 11, title: "The Control Plane" },
   { id: 12, title: "30-Day Launch + Pricing" }
@@ -113,11 +113,10 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-slate-400 text-sm sm:text-base px-4 mt-8 pb-48 animate-fade-in z-10" style={{ animationDelay: '0.8s' }}>
-        <span className="font-semibold">ShooflyAI</span>
-        <span className="hidden sm:inline">•</span>
-        <span>2025</span>
+      {/* Footer with Logo */}
+      <div className="flex flex-col items-center justify-center gap-3 px-4 mt-8 pb-48 animate-fade-in z-10" style={{ animationDelay: '0.8s' }}>
+        <img src="/shoofly-wordmark.png" alt="ShooflyAI" className="h-7 sm:h-9 opacity-70 hover:opacity-100 transition-opacity" />
+        <span className="text-slate-500 text-xs">2025</span>
       </div>
     </div>
   );
@@ -345,16 +344,13 @@ const Slide4: React.FC<SlideProps> = ({ isActive }) => {
         {/* Main value proposition */}
         <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-8 border border-emerald-500/30 mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Central brain visual */}
+            {/* Central brain visual with SIC logo */}
             <div className="flex-shrink-0">
               <div className="relative">
-                <div className="w-32 h-32 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-3xl flex items-center justify-center border-2 border-emerald-400/50 shadow-xl shadow-emerald-500/20">
-                  <Brain className="w-16 h-16 text-emerald-400" />
-              </div>
-                <div className="absolute -top-2 -right-2 px-4 py-1.5 bg-emerald-500 border-2 border-emerald-300 rounded-full shadow-lg">
-                  <span className="text-white font-black text-sm tracking-wider">SIC</span>
-            </div>
+                <div className="w-32 h-32 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-3xl flex items-center justify-center border-2 border-emerald-400/50 shadow-xl shadow-emerald-500/20 p-4">
+                  <img src="/sic-logo.png" alt="SIC" className="w-full h-full object-contain" />
                 </div>
+              </div>
             </div>
 
             {/* Copy */}
@@ -2316,11 +2312,11 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Footer with SIC Logo */}
         <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 rounded-full border border-slate-700/50">
-            <Brain className="w-3 h-3 text-cyan-400" />
-            <span className="text-xs text-slate-300">Powered by <span className="text-cyan-400 font-semibold">SIC</span></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700/50">
+            <img src="/sic-logo.png" alt="SIC" className="h-5 w-5 object-contain" />
+            <span className="text-xs text-slate-300">Powered by <span className="text-cyan-400 font-semibold">Shoofly Intelligence Cloud</span></span>
           </div>
         </div>
       </div>
@@ -2513,8 +2509,8 @@ export const MarketingAIOS: React.FC = () => {
       case 4: return <Slide5 isActive={isActive} slideIndex={currentSlide} />;           // You Own It. We Operate It.
       case 5: return <Slide6 isActive={isActive} slideIndex={currentSlide} />;           // Why Now
       case 6: return <Slide7 isActive={isActive} slideIndex={currentSlide} />;           // The Shoofly Method
-      case 7: return <Slide8 isActive={isActive} slideIndex={currentSlide} />;           // What We Build (3 blocks)
-      case 8: return <Slide9Demo isActive={isActive} slideIndex={currentSlide} />;       // Demo Workflow
+      case 7: return <Slide9Demo isActive={isActive} slideIndex={currentSlide} />;       // Demo Workflow (SWAPPED - now 8)
+      case 8: return <Slide8 isActive={isActive} slideIndex={currentSlide} />;           // What We Build (SWAPPED - now 9)
       case 9: return <Slide10Proof isActive={isActive} slideIndex={currentSlide} />;     // Proof: Real Results
       case 10: return <Slide11ControlPlane isActive={isActive} slideIndex={currentSlide} />; // Control Plane Dashboard
       case 11: return <Slide12Final isActive={isActive} slideIndex={currentSlide} />;    // 30-Day Launch + Pricing
