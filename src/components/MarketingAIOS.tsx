@@ -31,7 +31,12 @@ import {
   Wrench,
   Download,
   X,
-  Calculator
+  Calculator,
+  Info,
+  Coins,
+  Layers,
+  Server,
+  Building2
 } from 'lucide-react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -326,12 +331,17 @@ const Slide3: React.FC<SlideProps> = ({ isActive }) => {
 
 // Slide 4 - The Solution in One Sentence
 const Slide4: React.FC<SlideProps> = ({ isActive }) => {
+  const [showSICModal, setShowSICModal] = useState(false);
+  
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-slate-950 via-emerald-950/20 to-slate-950 relative overflow-hidden py-8 pb-32">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
+
+      {/* SIC Pricing Modal */}
+      <SICPricingModal isOpen={showSICModal} onClose={() => setShowSICModal(false)} />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in-up tracking-tight text-center">
@@ -347,11 +357,19 @@ const Slide4: React.FC<SlideProps> = ({ isActive }) => {
             {/* Central brain visual with SIC logo */}
             <div className="flex-shrink-0">
               <div className="relative">
-                <div className="w-32 h-32 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-3xl flex items-center justify-center border-2 border-emerald-400/50 shadow-xl shadow-emerald-500/20 p-4">
+                <div 
+                  className="w-32 h-32 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-3xl flex items-center justify-center border-2 border-emerald-400/50 shadow-xl shadow-emerald-500/20 p-4 cursor-pointer hover:scale-105 transition-transform group"
+                  onClick={() => setShowSICModal(true)}
+                >
                   <img src="/sic-logo.png" alt="SIC" className="w-full h-full object-contain" />
-                </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="px-2 py-0.5 bg-emerald-500/90 rounded-full text-[9px] text-white font-medium whitespace-nowrap">
+                      Click for details
               </div>
             </div>
+                </div>
+            </div>
+          </div>
 
             {/* Copy */}
             <div className="flex-1 text-center lg:text-left">
@@ -372,44 +390,83 @@ const Slide4: React.FC<SlideProps> = ({ isActive }) => {
                   <span>Feed everything into a <span className="text-white font-semibold">custom dashboard</span> (single pane of truth)</span>
                 </li>
               </ul>
+              {/* SIC Details Link */}
+              <button
+                onClick={() => setShowSICModal(true)}
+                className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500/50 rounded-lg text-emerald-400 text-sm font-medium transition-all group"
+              >
+                <Info className="w-4 h-4" />
+                <span>How SIC Pricing Works</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+              </button>
         </div>
               </div>
             </div>
 
         {/* Visual: Central brain with connectors to tools + dashboard */}
-        <div className="bg-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
-            {/* Left tools */}
-            <div className="flex flex-col gap-3">
+        <div className="bg-slate-900/40 backdrop-blur-sm rounded-3xl p-6 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3">
+            {/* Left tools - 2 columns */}
+            <div className="grid grid-cols-2 gap-2">
               {[
-                { icon: '🎙️', name: 'Fireflies' },
+                { icon: '👥', name: 'CRM' },
                 { icon: '📊', name: 'QuickBooks' },
+                { icon: '🎙️', name: 'AI Notetaker' },
+                { icon: '🤖', name: 'AI Agents' },
+                { icon: '⚡', name: 'Automations' },
+                { icon: '🔧', name: 'Custom Tools' },
               ].map((tool, idx) => (
-                <div key={idx} className="flex items-center gap-2">
-                  <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-600/50 flex items-center justify-center">
-                    <span className="text-xl">{tool.icon}</span>
+                <div key={idx} className="flex items-center gap-1.5">
+                  <div className="w-9 h-9 rounded-lg bg-slate-800/80 border border-slate-600/50 flex items-center justify-center">
+                    <span className="text-base">{tool.icon}</span>
+                  </div>
+                  <span className="text-[10px] text-slate-400 hidden sm:block">{tool.name}</span>
                 </div>
-                  <span className="text-xs text-slate-400 hidden sm:block">{tool.name}</span>
-            </div>
               ))}
-      </div>
+            </div>
 
             {/* Connector dots */}
             <div className="flex flex-col gap-1">
               <div className="w-1 h-1 bg-emerald-400 rounded-full" />
               <div className="w-1 h-1 bg-emerald-400 rounded-full" />
               <div className="w-1 h-1 bg-emerald-400 rounded-full" />
-                </div>
+            </div>
 
-            {/* Central SIC brain */}
-            <div className="relative mx-4">
+            {/* Central SIC brain with swap models indicator + info hover */}
+            <div className="relative mx-3 group/sic">
               <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/30 to-blue-500/30 rounded-2xl flex items-center justify-center border-2 border-emerald-400/50 shadow-lg shadow-emerald-500/20">
                 <Brain className="w-10 h-10 text-emerald-400" />
-                      </div>
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-2 py-0.5 bg-emerald-500 border border-emerald-300 rounded-md">
+              </div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 px-2 py-0.5 bg-emerald-500 border border-emerald-300 rounded-md">
                 <span className="text-white font-bold text-[8px] tracking-wide">SIC</span>
               </div>
-          </div>
+              {/* Swap models indicator with info icon */}
+              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 px-2 py-0.5 bg-slate-800/90 border border-cyan-500/50 rounded-full flex items-center gap-1 cursor-help">
+                <span className="text-cyan-400 font-medium text-[9px] whitespace-nowrap">🔄 Swap Models</span>
+                <Info className="w-3 h-3 text-cyan-400/70" />
+              </div>
+              
+              {/* Info tooltip on hover */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 -top-4 -translate-y-full w-72 bg-slate-950 border border-cyan-500/40 rounded-xl p-4 shadow-2xl opacity-0 invisible group-hover/sic:opacity-100 group-hover/sic:visible transition-all duration-200 z-50">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-3 h-3 bg-slate-950 border-r border-b border-cyan-500/40" />
+                <h5 className="text-cyan-400 font-bold text-sm mb-2 flex items-center gap-2">
+                  <span>🔄</span> Why Model Swapping Matters
+                </h5>
+                <div className="space-y-2 text-xs">
+                  <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-2">
+                    <p className="text-red-400 font-semibold mb-1">❌ ChatGPT / Rented AI</p>
+                    <p className="text-slate-400">Your "memory" lives on OpenAI's servers. Switch to Claude? <span className="text-red-300">Start from scratch.</span> They own your context.</p>
+                  </div>
+                  <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2">
+                    <p className="text-emerald-400 font-semibold mb-1">✓ SIC / Owned Intelligence</p>
+                    <p className="text-slate-400">Your memory, playbooks & workflows stay in <span className="text-emerald-300">your</span> SIC. Swap GPT-4 → Claude → Gemini → local models. <span className="text-emerald-300">Zero data loss.</span></p>
+                  </div>
+                  <p className="text-slate-500 text-[10px] italic pt-1 border-t border-slate-700/50">
+                    The intelligence layer is yours. Models are just the engine—swap anytime.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Connector dots */}
             <div className="flex flex-col gap-1">
@@ -418,14 +475,14 @@ const Slide4: React.FC<SlideProps> = ({ isActive }) => {
               <div className="w-1 h-1 bg-blue-400 rounded-full" />
             </div>
 
-            {/* Right side: Dashboard */}
+            {/* Right side: Custom Dashboard */}
             <div className="flex items-center gap-2">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/50 flex items-center justify-center">
-                <BarChart3 className="w-8 h-8 text-blue-400" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/50 flex items-center justify-center">
+                <BarChart3 className="w-7 h-7 text-blue-400" />
               </div>
               <div className="hidden sm:block">
-                <span className="text-sm text-white font-semibold">Dashboard</span>
-                <p className="text-xs text-slate-400">Single pane of truth</p>
+                <span className="text-sm text-white font-semibold">Custom Dashboard</span>
+                <p className="text-[10px] text-slate-400">Single pane of truth</p>
               </div>
             </div>
           </div>
@@ -667,6 +724,209 @@ const ROICalculatorModal: React.FC<ROICalculatorModalProps> = ({ isOpen, onClose
   );
 };
 
+// SIC Pricing Modal Component
+interface SICPricingModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const SICPricingModal: React.FC<SICPricingModalProps> = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {/* Backdrop */}
+      <div 
+        className="fixed inset-0 bg-black/85 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      
+      {/* Modal */}
+      <div className="relative bg-slate-900 rounded-2xl border border-slate-700/50 w-full max-w-5xl shadow-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700/50 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10">
+          <div className="flex items-center space-x-3">
+            <img src="/sic-logo.png" alt="SIC" className="h-8 w-8 object-contain" />
+            <div>
+              <h2 className="text-xl font-bold text-white">Shoofly Intelligence Cloud</h2>
+              <p className="text-slate-400 text-sm">Own your AI. We operate it. | <span className="text-cyan-400">Operations</span> + <span className="text-emerald-400">Credits</span></p>
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-all"
+            aria-label="Close"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="p-5">
+          {/* 3 Tier Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+            {/* Standard */}
+            <div className="bg-slate-800/60 rounded-xl p-5 border border-slate-600/50 hover:border-emerald-500/50 transition-all">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <Layers className="w-5 h-5 text-emerald-400" />
+                  <h4 className="text-lg font-bold text-white">Standard</h4>
+                </div>
+                <div>
+                  <span className="text-2xl font-bold text-emerald-400">$499</span>
+                  <span className="text-slate-400 text-sm">/mo</span>
+                </div>
+              </div>
+              <div className="space-y-1.5 text-sm">
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Credits</span>
+                  <span className="text-white font-medium">25k</span>
+              </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Lanes</span>
+                  <span className="text-white font-medium">1</span>
+                    </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>AI Employees</span>
+                  <span className="text-white font-medium">2</span>
+                    </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Connectors</span>
+                  <span className="text-white font-medium">2</span>
+                  </div>
+              </div>
+              <p className="text-xs text-slate-500 mt-3 italic">Prove ROI on 1 lane</p>
+                </div>
+
+            {/* Pro - Highlighted */}
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-5 border-2 border-blue-500/50 relative">
+              <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 px-3 py-0.5 bg-blue-500 rounded-full text-xs font-bold text-white">
+                POPULAR
+              </div>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <Server className="w-5 h-5 text-blue-400" />
+                  <h4 className="text-lg font-bold text-white">Pro</h4>
+              </div>
+                <div>
+                  <span className="text-2xl font-bold text-blue-400">$2,499</span>
+                  <span className="text-slate-400 text-sm">/mo</span>
+            </div>
+          </div>
+              <div className="space-y-1.5 text-sm">
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Credits</span>
+                  <span className="text-white font-medium">150k</span>
+      </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Lanes</span>
+                  <span className="text-white font-medium">3</span>
+    </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>AI Employees</span>
+                  <span className="text-white font-medium">10</span>
+                  </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Connectors</span>
+                  <span className="text-white font-medium">10</span>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 mt-3 italic">Multi-agent + dashboards</p>
+            </div>
+
+            {/* Enterprise */}
+            <div className="bg-slate-800/60 rounded-xl p-5 border border-slate-600/50 hover:border-purple-500/50 transition-all">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <Building2 className="w-5 h-5 text-purple-400" />
+                  <h4 className="text-lg font-bold text-white">Enterprise</h4>
+                      </div>
+                <div>
+                  <span className="text-2xl font-bold text-purple-400">Custom</span>
+                    </div>
+                  </div>
+              <div className="space-y-1.5 text-sm">
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Credits</span>
+                  <span className="text-white font-medium">500k+</span>
+                </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Lanes</span>
+                  <span className="text-white font-medium">Unlimited</span>
+                  </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>AI Employees</span>
+                  <span className="text-white font-medium">Custom</span>
+                        </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>Connectors</span>
+                  <span className="text-white font-medium">Custom</span>
+                    </div>
+              </div>
+              <p className="text-xs text-slate-500 mt-3 italic">Dedicated + SLA + governance</p>
+                  </div>
+                </div>
+
+          {/* Bottom Row: Credits + Governance side by side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* What Credits Cover */}
+            <div className="bg-slate-800/40 rounded-xl p-4 border border-slate-700/30">
+              <div className="flex items-center gap-2 mb-3">
+                <Coins className="w-5 h-5 text-amber-400" />
+                <h4 className="text-base font-semibold text-white">What Credits Cover</h4>
+                  </div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                {[
+                  { label: 'Model calls', icon: Brain },
+                  { label: 'RAG/embeddings', icon: Database },
+                  { label: 'Agent runtime', icon: Workflow },
+                  { label: 'Voice minutes', icon: MessageSquare },
+                  { label: 'Storage', icon: FileText },
+                  { label: 'Automations', icon: Zap }
+                ].map(({ label, icon: Icon }, idx) => (
+                  <div key={idx} className="flex items-center gap-2 text-slate-400">
+                    <Icon className="w-4 h-4 text-slate-500" />
+                    <span>{label}</span>
+                    </div>
+                ))}
+                  </div>
+                </div>
+
+            {/* Governance */}
+            <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-xl p-4 border border-emerald-500/30">
+              <div className="flex items-center gap-2 mb-3">
+                <Shield className="w-5 h-5 text-emerald-400" />
+                <h4 className="text-base font-semibold text-white">No Surprise Bills</h4>
+              </div>
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <div className="flex items-center gap-2 text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Soft/hard caps</span>
+                        </div>
+                <div className="flex items-center gap-2 text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Usage ledger</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Team budgets</span>
+                        </div>
+            </div>
+          </div>
+        </div>
+
+          {/* Footer message */}
+          <div className="mt-4 text-center">
+            <p className="text-xs text-slate-500">
+              Unlike typical SaaS, you own the intelligence layer. We operate it securely.
+            </p>
+              </div>
+          </div>
+        </div>
+      </div>
+  );
+};
+
 // Slide 5 - You Own It. We Operate It.
 const Slide5: React.FC<SlideProps> = ({ isActive }) => {
   return (
@@ -674,7 +934,7 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
-      </div>
+    </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
@@ -693,9 +953,9 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
                   <Shield className="w-6 h-6 text-emerald-400" />
-        </div>
+            </div>
                 <h3 className="text-2xl font-bold text-white">You Own</h3>
-                </div>
+          </div>
               <ul className="space-y-4">
                 {[
                   'Code & workflows',
@@ -709,7 +969,7 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
                   </li>
                 ))}
               </ul>
-                </div>
+      </div>
               </div>
 
           {/* We Operate */}
@@ -719,7 +979,7 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
                   <Wrench className="w-6 h-6 text-blue-400" />
-                </div>
+            </div>
                 <h3 className="text-2xl font-bold text-white">We Operate</h3>
               </div>
               <ul className="space-y-4">
@@ -735,9 +995,9 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
                   </li>
                 ))}
               </ul>
-            </div>
           </div>
-              </div>
+        </div>
+      </div>
 
         {/* Fireflies example callout */}
         <div className="bg-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
@@ -762,7 +1022,7 @@ const Slide5: React.FC<SlideProps> = ({ isActive }) => {
               </div>
             </div>
           </div>
-      </div>
+    </div>
   );
 };
 
@@ -775,7 +1035,7 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
           backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(168, 85, 247, 0.3) 1px, transparent 0)',
           backgroundSize: '50px 50px'
         }} />
-    </div>
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
@@ -783,8 +1043,8 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
         </h2>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up tracking-tight text-center">
           <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">Agentic OS</span>
-        </h2>
-
+      </h2>
+      
         {/* Maturity Staircase */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {/* Phase 1 */}
@@ -794,9 +1054,9 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center">
                   <span className="text-emerald-400 font-bold text-lg">1</span>
-                  </div>
+                </div>
                 <h3 className="text-xl font-bold text-white">Business Strategy</h3>
-                      </div>
+                </div>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2 text-slate-300">
                   <Target className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
@@ -811,8 +1071,8 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
                   <span>Define success criteria</span>
                 </li>
               </ul>
-                    </div>
-          </div>
+                </div>
+                  </div>
 
           {/* Phase 2 */}
           <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
@@ -838,8 +1098,8 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
                   <span>Set up access controls</span>
                 </li>
               </ul>
-                  </div>
-                </div>
+              </div>
+            </div>
 
           {/* Phase 3 */}
           <div className="relative group animate-slide-in-up" style={{ animationDelay: '0.4s' }}>
@@ -848,9 +1108,9 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
                   <span className="text-purple-400 font-bold text-lg">3</span>
-                  </div>
+              </div>
                 <h3 className="text-xl font-bold text-white">Agentic OS</h3>
-                        </div>
+            </div>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2 text-slate-300">
                   <Workflow className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
@@ -865,18 +1125,18 @@ const Slide7: React.FC<SlideProps> = ({ isActive }) => {
                   <span>Launch Agents</span>
                 </li>
               </ul>
-                    </div>
-                  </div>
-                </div>
+            </div>
+          </div>
+            </div>
 
         {/* All visible in dashboard */}
         <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           <div className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/40 rounded-2xl">
             <BarChart3 className="w-6 h-6 text-purple-400" />
             <span className="text-lg font-semibold text-white">All visible in your <span className="text-purple-400">Custom Dashboard</span></span>
-                  </div>
-                    </div>
-                  </div>
+          </div>
+        </div>
+      </div>
                 </div>
   );
 };
@@ -971,7 +1231,7 @@ const Slide6: React.FC<SlideProps> = ({ isActive }) => {
               <p className="text-emerald-400 text-xs">Build exactly what you need</p>
           </div>
         </div>
-      </div>
+        </div>
       </div>
     </div>
   );
@@ -1003,7 +1263,7 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center">
                   <Workflow className="w-8 h-8 text-emerald-400" />
-                </div>
+            </div>
                 </div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Automations</h3>
               <p className="text-lg text-slate-300 mb-6 text-center">
@@ -1023,8 +1283,8 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
                   <span className="text-slate-300">Smart routing & triggers</span>
                 </li>
               </ul>
-                </div>
-                  </div>
+          </div>
+        </div>
 
           {/* Assistants */}
           <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -1053,8 +1313,8 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
                   <span className="text-slate-300">Zero learning curve</span>
                 </li>
               </ul>
-              </div>
-            </div>
+                      </div>
+                    </div>
 
           {/* Agents */}
           <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
@@ -1084,8 +1344,8 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
                 </li>
               </ul>
             </div>
-          </div>
             </div>
+          </div>
 
         {/* Footer: All connected through SIC */}
         <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
@@ -1096,11 +1356,11 @@ const Slide8: React.FC<SlideProps> = ({ isActive }) => {
               <Brain className="w-6 h-6 text-cyan-400" />
               <ArrowRight className="w-4 h-4 text-slate-500" />
               <BarChart3 className="w-5 h-5 text-blue-400" />
-          </div>
+            </div>
             <span className="text-slate-300">All connected through <span className="text-cyan-400 font-semibold">SIC</span> → surfaced in your <span className="text-blue-400 font-semibold">Custom Dashboard</span></span>
-        </div>
-        </div>
-      </div>
+            </div>
+              </div>
+            </div>
     </div>
   );
 };
@@ -1111,7 +1371,7 @@ const Slide9Demo: React.FC<SlideProps> = ({ isActive }) => {
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-8 bg-gradient-to-br from-slate-950 via-cyan-950/20 to-slate-950 relative overflow-hidden pb-32">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" />
-      </div>
+              </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in-up tracking-tight text-center">
@@ -1131,7 +1391,7 @@ const Slide9Demo: React.FC<SlideProps> = ({ isActive }) => {
             </div>
               <h4 className="text-white font-semibold mb-1">Trigger</h4>
               <p className="text-sm text-slate-400 max-w-[140px]">Meeting ends / doc received / form submitted</p>
-        </div>
+            </div>
 
             {/* Arrow */}
             <ArrowRight className="w-8 h-8 text-slate-500 hidden md:block" />
@@ -1141,10 +1401,10 @@ const Slide9Demo: React.FC<SlideProps> = ({ isActive }) => {
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-2xl bg-blue-500/20 border border-blue-500/50 flex items-center justify-center mb-3">
                 <Brain className="w-10 h-10 text-blue-400" />
-              </div>
+          </div>
               <h4 className="text-white font-semibold mb-1">AI Extracts</h4>
               <p className="text-sm text-slate-400 max-w-[140px]">Decisions + action items + owners</p>
-          </div>
+        </div>
 
             {/* Arrow */}
             <ArrowRight className="w-8 h-8 text-slate-500 hidden md:block" />
@@ -1218,17 +1478,17 @@ const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
         {/* Three Proof Tiles */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl relative z-10 mb-10">
           {/* K-12 Social Scoring */}
-          <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+        <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
             <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-emerald-500/40 transition-all h-full flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-emerald-400" />
-                </div>
+            </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">K-12 Social Scoring</h3>
                   <span className="text-xs text-emerald-400">Assistant + SIC</span>
-                </div>
+            </div>
               </div>
               <div className="space-y-3 mb-4 flex-grow">
                 <div className="text-sm text-slate-400">
@@ -1245,15 +1505,15 @@ const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
                 <div className="text-2xl font-bold text-emerald-400">18 hrs</div>
                 <div className="text-xs text-slate-400">saved this week</div>
               </div>
-              <button
+                <button
                 onClick={() => setIsK12ModalOpen(true)}
                 className="mt-4 w-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-medium py-2 rounded-lg transition-all text-sm"
-              >
-                View Demo →
-              </button>
+                >
+                  View Demo →
+                </button>
+              </div>
             </div>
-          </div>
-
+            
           {/* CPA Firm Operations */}
           <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
@@ -1261,36 +1521,36 @@ const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
                   <DollarSign className="w-6 h-6 text-blue-400" />
-                </div>
+              </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">CPA Firm Ops</h3>
                   <span className="text-xs text-blue-400">Automations + SIC</span>
-                </div>
+              </div>
               </div>
               <div className="space-y-3 mb-4 flex-grow">
                 <div className="text-sm text-slate-400">
                   <span className="text-slate-300 font-medium">Problem:</span> Owner bottleneck (calls/email)
-                </div>
+            </div>
                 <div className="text-sm text-slate-400">
                   <span className="text-slate-300 font-medium">Build:</span> DocuSign auto-updates + nightly reconciliation
-                </div>
+              </div>
                 <div className="text-sm text-blue-400 font-semibold">
                   Result: Smart routing + CRM ↔ QuickBooks sync
-                </div>
-              </div>
+            </div>
+          </div>
               <div className="bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 text-center">
                 <div className="text-2xl font-bold text-blue-400">6 hrs</div>
                 <div className="text-xs text-slate-400">saved this week</div>
-              </div>
-              <button
+        </div>
+                <button
                 onClick={() => setIsModalOpen(true)}
                 className="mt-4 w-full bg-blue-500/10 hover:bg-blue-500/20 border border-blue-400/30 text-blue-300 font-medium py-2 rounded-lg transition-all text-sm"
-              >
-                View Demo →
-              </button>
+                >
+                  View Demo →
+                </button>
+              </div>
             </div>
-          </div>
-
+            
           {/* Content / Marketing Ops */}
           <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
@@ -1298,37 +1558,37 @@ const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
                   <Sparkles className="w-6 h-6 text-purple-400" />
-                </div>
+              </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">Content Engine</h3>
                   <span className="text-xs text-purple-400">Full Automation</span>
-                </div>
+              </div>
               </div>
               <div className="space-y-3 mb-4 flex-grow">
                 <div className="text-sm text-slate-400">
                   <span className="text-slate-300 font-medium">Problem:</span> Manual research to publish
-                </div>
+            </div>
                 <div className="text-sm text-slate-400">
                   <span className="text-slate-300 font-medium">Build:</span> Automated pipeline
-                </div>
+              </div>
                 <div className="text-sm text-purple-400 font-semibold">
                   Result: 730% ROI in 4 months
-                </div>
-              </div>
+            </div>
+          </div>
               <div className="bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 text-center">
                 <div className="text-2xl font-bold text-purple-400">22 hrs</div>
                 <div className="text-xs text-slate-400">saved this week</div>
-              </div>
-              <button
+        </div>
+                <button
                 onClick={() => setIsContentEngineModalOpen(true)}
                 className="mt-4 w-full bg-purple-500/10 hover:bg-purple-500/20 border border-purple-400/30 text-purple-300 font-medium py-2 rounded-lg transition-all text-sm"
-              >
-                View Demo →
-              </button>
+                >
+                  View Demo →
+                </button>
             </div>
-          </div>
-        </div>
-
+              </div>
+            </div>
+            
         {/* Testimonials Row - Minimal */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           {/* K-12 Testimonial */}
@@ -1344,7 +1604,7 @@ const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
               <a href="https://shooflyai.com/cobbcounty" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-xs font-medium">
                 Case Study →
               </a>
-            </div>
+              </div>
           </div>
 
           {/* CPA Testimonial */}
@@ -1360,9 +1620,9 @@ const Slide10Proof: React.FC<SlideProps> = ({ isActive }) => {
               <a href="https://shooflyai.com/data-reconciliation-case-study" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 text-xs font-medium">
                 Case Study →
               </a>
+              </div>
             </div>
-          </div>
-
+            
           {/* Law Firm Testimonial */}
           <div className="bg-slate-800/30 rounded-xl p-4 border border-slate-700/30">
             <p className="text-slate-300 text-sm italic leading-relaxed mb-3">
@@ -2126,18 +2386,18 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
                 <BarChart3 className="w-4 h-4 text-cyan-400" />
-              </div>
+                  </div>
               <div>
                 <h3 className="text-base font-bold text-white">Your Command Center</h3>
                 <p className="text-[10px] text-slate-400">Custom Dashboard • Single Pane of Truth</p>
-              </div>
-            </div>
+                  </div>
+                </div>
             <div className="flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
               <span className="text-[10px] text-emerald-400 font-semibold">Live</span>
+              </div>
             </div>
-          </div>
-          
+              
           {/* 6 Widget Grid with Charts/Data */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 mb-4">
             {/* Widget 1: Active Workflows with mini bar chart */}
@@ -2146,17 +2406,17 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
                 <div className="flex items-center gap-2">
                   <Workflow className="w-4 h-4 text-emerald-400" />
                   <span className="text-white font-semibold text-xs">Active Workflows</span>
-                </div>
+                  </div>
                 <Activity className="w-3 h-3 text-emerald-400/50" />
-              </div>
+                  </div>
               <div className="text-2xl font-bold text-emerald-400 mb-2">12</div>
               <div className="flex items-center gap-0.5 mb-2 h-6">
                 {[80, 65, 90, 75, 95, 85].map((height, i) => (
                   <div key={i} className="flex-1 bg-emerald-500/30 rounded-sm border border-emerald-500/50" style={{ height: `${height/3.5}px` }} />
                 ))}
-              </div>
+                </div>
               <div className="text-[10px] text-emerald-400">↑ 23% vs last week</div>
-            </div>
+              </div>
 
             {/* Widget 2: Agent Status with status indicator */}
             <div className="bg-slate-800/60 rounded-xl p-3 lg:p-4 border border-purple-500/20">
@@ -2189,17 +2449,17 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
                 <div className="flex items-center gap-2">
                   <MessageSquare className="w-4 h-4 text-blue-400" />
                   <span className="text-white font-semibold text-xs">Queries Today</span>
-                </div>
+                  </div>
                 <TrendingUp className="w-3 h-3 text-blue-400" />
-              </div>
+                  </div>
               <div className="text-2xl font-bold text-blue-400 mb-2">847</div>
               <div className="flex items-center gap-0.5 mb-2 h-6">
                 {[12, 18, 15, 22, 28, 35, 42, 38, 45, 52].map((height, i) => (
                   <div key={i} className="flex-1 bg-blue-500/40 rounded-sm border border-blue-500/60" style={{ height: `${height/2.5}px` }} />
                 ))}
-              </div>
+                </div>
               <div className="text-[10px] text-blue-400">Peak: 2-4pm (87 q/hr)</div>
-            </div>
+              </div>
 
             {/* Widget 4: Approvals Queue with list */}
             <div className="bg-slate-800/60 rounded-xl p-3 border border-orange-500/30">
@@ -2220,8 +2480,8 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
                   <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
                   <span>3 agent actions</span>
                 </div>
-              </div>
             </div>
+          </div>
 
             {/* Widget 5: KPI Cards with progress */}
             <div className="bg-slate-800/60 rounded-xl p-3 border border-cyan-500/30">
@@ -2303,13 +2563,13 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
             <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
               <DollarSign className="w-4 h-4 text-blue-400" />
             </div>
-            <div>
+                  <div>
               <h4 className="text-sm font-semibold text-white mb-0.5">Cost lever</h4>
               <p className="text-slate-300 text-xs leading-snug">
                 Reduce seat costs by shifting work into your owned dashboard; keep only minimum <span className="text-blue-400 font-semibold">system-of-record</span> licenses.
               </p>
-            </div>
-          </div>
+                  </div>
+                </div>
         </div>
 
         {/* Footer with SIC Logo */}
@@ -2326,8 +2586,13 @@ const Slide11ControlPlane: React.FC<SlideProps> = ({ isActive }) => {
 
 // Slide 12 - 30-Day Launch Plan + Commercials (condensed final slide)
 const Slide12Final: React.FC<SlideProps> = ({ isActive }) => {
+  const [showSICModal, setShowSICModal] = useState(false);
+  
   return (
-    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 py-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden pb-32">
+      {/* SIC Pricing Modal */}
+      <SICPricingModal isOpen={showSICModal} onClose={() => setShowSICModal(false)} />
+      
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl" />
@@ -2335,91 +2600,91 @@ const Slide12Final: React.FC<SlideProps> = ({ isActive }) => {
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         {/* Header */}
-        <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white animate-fade-in-up tracking-tight text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-5 text-white animate-fade-in-up tracking-tight text-center">
           Ship value in 7 days. <span className="bg-gradient-to-r from-emerald-400 to-blue-400 text-transparent bg-clip-text">Prove ROI by Day 30.</span>
         </h2>
 
         {/* 2-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
           {/* Left: Timeline + Guarantee */}
-          <div className="space-y-5">
+          <div className="space-y-3">
             {/* Timeline */}
-            <div className="bg-slate-900/60 backdrop-blur-xl rounded-2xl p-7 border border-slate-700/50">
-              <h4 className="text-white font-bold mb-6 text-center text-xl">30-Day Timeline</h4>
-              <div className="space-y-5">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Rocket className="w-6 h-6 text-emerald-400" />
+            <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-5 border border-slate-700/50">
+              <h4 className="text-white font-bold mb-4 text-center text-lg">30-Day Timeline</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-5 h-5 text-emerald-400" />
                   </div>
                   <div>
-                    <p className="text-white text-lg font-semibold">Week 1</p>
-                    <p className="text-sm text-slate-400">Connect + baseline + ship dashboard</p>
+                    <p className="text-white text-base font-semibold">Week 1</p>
+                    <p className="text-xs text-slate-400">Connect + baseline + ship dashboard</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Wrench className="w-6 h-6 text-blue-400" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Wrench className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-white text-lg font-semibold">Week 2-3</p>
-                    <p className="text-sm text-slate-400">Ship workflows + iterate</p>
+                    <p className="text-white text-base font-semibold">Week 2-3</p>
+                    <p className="text-xs text-slate-400">Ship workflows + iterate</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <FileCheck className="w-6 h-6 text-purple-400" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FileCheck className="w-5 h-5 text-purple-400" />
                   </div>
                   <div>
-                    <p className="text-white text-lg font-semibold">Week 4</p>
-                    <p className="text-sm text-slate-400">ROI review + expand</p>
+                    <p className="text-white text-base font-semibold">Week 4</p>
+                    <p className="text-xs text-slate-400">ROI review + expand</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Guarantee */}
-            <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-emerald-500/30 text-center">
-              <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto mb-3" />
-              <p className="text-emerald-300 font-semibold text-lg">We fine-tune at no cost until it works</p>
-            </div>
+            <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-500/30 text-center">
+              <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
+              <p className="text-emerald-300 font-semibold text-base">We fine-tune at no cost until it works</p>
           </div>
+        </div>
 
           {/* Right: Pricing */}
-          <div className="bg-slate-900/60 backdrop-blur-xl rounded-2xl p-7 border border-slate-700/50">
-            <h4 className="text-white font-bold mb-6 text-center text-xl">Packaging & Pricing</h4>
+          <div className="bg-slate-900/60 backdrop-blur-xl rounded-xl p-5 border border-slate-700/50">
+            <h4 className="text-white font-bold mb-4 text-center text-lg">Packaging & Pricing</h4>
             
             {/* Core Packages */}
-            <div className="space-y-4 mb-5">
-              <div className="bg-slate-800/50 rounded-xl p-5 border border-emerald-500/30 flex items-center justify-between">
+            <div className="space-y-2.5 mb-4">
+              <div className="bg-slate-800/50 rounded-lg p-3.5 border border-emerald-500/30 flex items-center justify-between">
                 <div>
-                  <p className="text-white font-semibold text-lg">Proof-of-Value (PoV) Pilot</p>
-                  <p className="text-sm text-slate-400">30-day validation</p>
+                  <p className="text-white font-semibold text-base">Proof-of-Value (PoV) Pilot</p>
+                  <p className="text-xs text-slate-400">30-day validation</p>
                 </div>
-                <p className="text-emerald-400 font-bold text-2xl">$4-8k</p>
+                <p className="text-emerald-400 font-bold text-xl">$4-8k</p>
               </div>
               
-              <div className="bg-slate-800/50 rounded-xl p-5 border border-blue-500/30 flex items-center justify-between">
+              <div className="bg-slate-800/50 rounded-lg p-3.5 border border-blue-500/30 flex items-center justify-between">
                 <div>
-                  <p className="text-white font-semibold text-lg">Sprint</p>
-                  <p className="text-sm text-slate-400">Expand workflows + agents</p>
+                  <p className="text-white font-semibold text-base">Sprint</p>
+                  <p className="text-xs text-slate-400">Expand workflows + agents</p>
                 </div>
-                <p className="text-blue-400 font-bold text-2xl">$10-18k</p>
+                <p className="text-blue-400 font-bold text-xl">$10-18k</p>
               </div>
               
-              <div className="bg-slate-800/50 rounded-xl p-5 border border-purple-500/30 flex items-center justify-between">
+              <div className="bg-slate-800/50 rounded-lg p-3.5 border border-purple-500/30 flex items-center justify-between">
                 <div>
-                  <p className="text-white font-semibold text-lg">AI OS Foundation</p>
-                  <p className="text-sm text-slate-400">Full Agentic OS</p>
+                  <p className="text-white font-semibold text-base">AI OS Foundation</p>
+                  <p className="text-xs text-slate-400">Full Agentic OS</p>
                 </div>
-                <p className="text-purple-400 font-bold text-2xl">$25k+</p>
+                <p className="text-purple-400 font-bold text-xl">$25k+</p>
               </div>
             </div>
 
             {/* Divider */}
-            <div className="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-5" />
+            <div className="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-3" />
 
             {/* Additional Services */}
-            <div className="space-y-3 text-base">
+            <div className="space-y-2 text-sm">
               <div className="flex items-center justify-between text-slate-300">
                 <span>Advising (monthly)</span>
                 <span className="text-cyan-400 font-semibold">min $2,500/mo</span>
@@ -2428,33 +2693,39 @@ const Slide12Final: React.FC<SlideProps> = ({ isActive }) => {
                 <span>AI Development</span>
                 <span className="text-blue-400 font-semibold">Varies</span>
               </div>
-              <div className="flex items-center justify-between text-slate-300">
-                <span>SIC Cloud (managed ops)</span>
-                <span className="text-emerald-400 font-semibold">$350–2.5k/mo</span>
-              </div>
+              <button 
+                onClick={() => setShowSICModal(true)}
+                className="flex items-center justify-between w-full text-slate-300 hover:bg-emerald-500/10 rounded-lg px-2 py-1 -mx-2 transition-all group"
+              >
+                <span className="flex items-center gap-2">
+                  SIC Cloud (managed ops)
+                  <Info className="w-3 h-3 text-emerald-400/70 group-hover:text-emerald-400 transition-colors" />
+                </span>
+                <span className="text-emerald-400 font-semibold group-hover:text-emerald-300">$350–2.5k/mo</span>
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Close CTA - Bigger */}
-        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-emerald-500/30 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <h4 className="text-2xl font-bold text-white mb-5 text-center">Pick 1 Workflow → Pick 1 KPI → Pick Start Date</h4>
-          <div className="flex items-center justify-center gap-10 flex-wrap">
-            <div className="flex items-center gap-3">
-              <Target className="w-6 h-6 text-emerald-400" />
-              <span className="text-slate-200 text-lg font-medium">KPI</span>
+        {/* Close CTA */}
+        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-500/30 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <h4 className="text-xl font-bold text-white mb-3 text-center">Pick 1 Workflow → Pick 1 KPI → Pick Start Date</h4>
+          <div className="flex items-center justify-center gap-8 flex-wrap">
+            <div className="flex items-center gap-2">
+              <Target className="w-5 h-5 text-emerald-400" />
+              <span className="text-slate-200 text-base font-medium">KPI</span>
             </div>
-            <div className="flex items-center gap-3">
-              <Network className="w-6 h-6 text-blue-400" />
-              <span className="text-slate-200 text-lg font-medium">Tools</span>
+            <div className="flex items-center gap-2">
+              <Network className="w-5 h-5 text-blue-400" />
+              <span className="text-slate-200 text-base font-medium">Tools</span>
             </div>
-            <div className="flex items-center gap-3">
-              <Calendar className="w-6 h-6 text-cyan-400" />
-              <span className="text-slate-200 text-lg font-medium">Start Date</span>
+            <div className="flex items-center gap-2">
+              <Calendar className="w-5 h-5 text-cyan-400" />
+              <span className="text-slate-200 text-base font-medium">Start Date</span>
             </div>
-            <div className="flex items-center gap-3">
-              <DollarSign className="w-6 h-6 text-purple-400" />
-              <span className="text-slate-200 text-lg font-medium">Payment</span>
+            <div className="flex items-center gap-2">
+              <DollarSign className="w-5 h-5 text-purple-400" />
+              <span className="text-slate-200 text-base font-medium">Payment</span>
             </div>
           </div>
         </div>

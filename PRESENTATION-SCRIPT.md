@@ -19,6 +19,8 @@
 - Let the brain/body diagram sink in
 - Focus on ownership vs. vendor lock-in
 - Remember: This is infrastructure, not chatbots
+- **Hover over SIC brain on Slide 4** to show the model swapping tooltip
+- **Click "How SIC Pricing Works"** to open the SIC pricing modal (Slides 4 & 12)
 
 ---
 
@@ -133,7 +135,7 @@ That's why ownership matters. When you rent, you're trapped. When you own, you'r
 
 ## **SLIDE 4: The Solution in One Sentence**
 
-### **Own the Brain That Connects All Your Tools [2 minutes]**
+### **Own the Brain That Connects All Your Tools [2.5 minutes]**
 
 **Script:**
 
@@ -155,11 +157,31 @@ Here's what it does:
 2. **Swap models without losing your playbooks**—use GPT, Claude, Gemini, whatever you want
 3. **Feed everything into a custom dashboard**—your single pane of truth
 
-*[Point to diagram at bottom]*
+*[Point to diagram at bottom - 6 tools flowing into SIC]*
 
-Look at this visual: Tools on the left, SIC in the middle, dashboard on the right.
+Look at this visual: 
 
-Everything flows through your owned brain. Nothing is trapped. Nothing is siloed.
+**Left side:** CRM, QuickBooks, AI Notetaker, AI Agents, Automations, Custom Tools—everything your business runs on.
+
+**Center:** SIC—your owned AI brain with the ability to **swap models**.
+
+*[HOVER over the SIC brain to show the tooltip]*
+
+Let me show you something important. Watch what happens when I hover here...
+
+*[Read from tooltip]*
+
+**With ChatGPT or rented AI:** Your 'memory' lives on OpenAI's servers. Switch to Claude? Start from scratch. They own your context.
+
+**With SIC / Owned Intelligence:** Your memory, playbooks & workflows stay in YOUR SIC. Swap GPT-4 → Claude → Gemini → local models. Zero data loss.
+
+The intelligence layer is yours. Models are just the engine—swap anytime.
+
+**Right side:** Custom Dashboard—your single pane of truth.
+
+*[Point to 'How SIC Pricing Works' button]*
+
+If you want to see SIC pricing details, click here to open the pricing modal. We have three tiers: Standard ($499/mo), Pro ($2,499/mo), and Enterprise (Custom).
 
 *[Pause]*
 
@@ -515,6 +537,20 @@ And here's our guarantee: **We fine-tune at no cost until it works.**
 - **AI Development:** Varies (custom builds)
 - **SIC Cloud (managed ops):** $350–2.5k/mo depending on scope
 
+*[Click on 'SIC Cloud (managed ops)' to open the SIC Pricing Modal]*
+
+Let me show you the SIC tiers in detail:
+
+**Standard ($499/mo):** 25k credits, 1 lane, 2 AI employees, 2 connectors—perfect for proving ROI on one workflow.
+
+**Pro ($2,499/mo):** 150k credits, 3 lanes, 10 AI employees, 10 connectors—multi-agent orchestration with dashboards.
+
+**Enterprise (Custom):** 500k+ credits, unlimited lanes, dedicated environment with SLA and governance.
+
+Credits cover: Model calls, RAG/embeddings, agent runtime, voice minutes, storage, and automations.
+
+And we have governance built in—soft/hard caps, usage ledger, team budgets. No surprise bills.
+
 *[Point to CTA at bottom]*
 
 **Pick 1 Workflow → Pick 1 KPI → Pick Start Date**
@@ -540,7 +576,7 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 ### **Anticipated Questions & Suggested Answers:**
 
 **Q: "How is this different from ChatGPT or Claude?"**
-**A:** "Three key differences: 1) You own it—your data, your models, your infrastructure. 2) It integrates with YOUR tools—not just chat, but your CRM, your project management, your databases. 3) It's built for work—not conversation, but actual workflow automation."
+**A:** "Three key differences: 1) You own it—your data, your models, your infrastructure. 2) It integrates with YOUR tools—not just chat, but your CRM, your project management, your databases. 3) It's built for work—not conversation, but actual workflow automation. And critically—with ChatGPT, your 'memory' lives on their servers. Switch to Claude? Start from scratch. With SIC, your intelligence layer stays with you. Swap models anytime, zero data loss."
 
 **Q: "What if the AI makes a mistake?"**
 **A:** "We build with humans in the loop. AI generates first drafts, automations require approval, and agents escalate when uncertain. Plus we use 99% confidence filtering and automatic fallback models."
@@ -563,6 +599,12 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 **Q: "What's the difference between Automations, Assistants, and Agents?"**
 **A:** "Automations are 'if-this-then-that' workflows (when X happens, do Y). Assistants let you ask questions and take actions in natural language. Agents are always-on workers with memory who follow SOPs and escalate when needed. They all work together."
 
+**Q: "Why can I swap models without losing my playbooks?"**
+**A:** "Because your intelligence layer—your memory, your playbooks, your workflows—all live in SIC, which you own. The AI model (GPT-4, Claude, Gemini, etc.) is just the 'engine' that processes your data. When you swap engines, SIC keeps all your context. With rented AI like ChatGPT, they own your context—so switching means starting over."
+
+**Q: "What's included in the SIC credits?"**
+**A:** "Credits cover everything: model calls & tokens, RAG/embeddings, agent runtime, voice minutes, storage, and automation runs. We have soft caps at 80% to warn you, hard caps at 100%, and full usage ledgers so you can see exactly what's consuming credits. No surprise bills."
+
 ---
 
 ## 🎯 **Key Talking Points to Remember**
@@ -577,6 +619,8 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 6. **"Brain and body"** — Use this metaphor to explain siloed AI
 7. **"Memory is the moat"** — Why vendors trap you
 8. **"Start small → Prove value → Scale forever"** — Clear progression
+9. **"Swap models, keep context"** — ChatGPT memory vs SIC ownership
+10. **"CRM, QuickBooks, AI Notetaker, AI Agents, Automations, Custom Tools"** — The 6 tool types we connect
 
 ---
 
@@ -585,7 +629,7 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 1. **Own Your AI. ROI in Weeks** - Opening hook
 2. **The Problem** - Brain/body diagram, siloed AI
 3. **Renting Intelligence Costs You** - Export data ≠ export intelligence
-4. **The Solution** - SIC connects everything
+4. **The Solution** - SIC connects 6 tool types, **hover for model swap tooltip**, SIC pricing modal
 5. **You Own It. We Operate It.** - Ownership model explained
 6. **Why Now** - AI unbundling SaaS
 7. **The Shoofly Method** - 3-phase path (Strategy → Data → AI)
@@ -593,7 +637,7 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 9. **What We Build** - Automations, Assistants, Agents (full suite)
 10. **Proof: Real Results** - K-12, CPA, Content Engine + testimonials
 11. **The Control Plane** - Dashboard with Ask, Act, Audit
-12. **30-Day Launch + Pricing** - Timeline, guarantee, packages
+12. **30-Day Launch + Pricing** - Timeline, guarantee, packages, SIC pricing modal
 
 ---
 
@@ -639,7 +683,9 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 
 - **Use the brain/body metaphor consistently** — It helps people understand why siloed AI doesn't work
 - **Pause after Slide 3** — Let the "memory is the moat" concept sink in
-- **Tell the Fireflies story on Slide 9** — Concrete examples land better than abstract concepts
+- **Hover over SIC brain on Slide 4** — Show the ChatGPT vs SIC comparison tooltip
+- **Click the SIC pricing buttons** — On Slides 4 & 12 to show detailed tier information
+- **Tell the Fireflies story on Slide 8** — Concrete examples land better than abstract concepts
 - **Point to live demos on Slide 10** — Offer to click through if they want to see more
 - **Address cost concerns proactively** — Talk about seat reduction and time saved, not just sticker price
 
@@ -649,6 +695,7 @@ So here's my question: Which path makes sense for you? Are you ready to prove va
 - **"We're not ready"** → "That's why we start with one workflow. Prove value in 30 days. Then decide."
 - **"It's too expensive"** → "Let's talk about time saved. What's your team's hourly rate? How many hours do you spend on manual workflows weekly?"
 - **"We've been burned by vendors"** → "That's exactly why we built ownership into our model. You own everything. No lock-in. Ever."
+- **"What about ChatGPT/Claude?"** → "Great tools for chat. But your memory lives on their servers. Switch providers? Start from scratch. With SIC, swap models anytime—your context stays with you."
 
 **Closing Techniques:**
 
